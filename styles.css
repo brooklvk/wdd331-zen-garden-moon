@@ -56,7 +56,7 @@ aside {
   grid-template-columns: 1fr;
   justify-items: start;
   margin: 2rem;
-  margin-top: -2rem;
+  margin-top: -8rem;
 }
 
 ul {
@@ -69,8 +69,8 @@ abbr[title] {
 }
 
 footer {
-  transform: translate(0, 650px);
-  padding-bottom: 2rem;
+  transform: translate(0, 575px);
+  padding: 4rem;
 }
 
 /*Small Version Layout: Footer*/

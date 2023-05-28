@@ -97,7 +97,7 @@ aside {
   @include grid(1fr);
   justify-items: start;
   margin: $margin-lg;
-  margin-top: -2rem;
+  margin-top: -8rem;
 }
 
 ul {
@@ -112,8 +112,8 @@ abbr[title] {
 //Move Footer to Bottom: This was the only way I could get the footer to move to the bottom. If you know a better way, please let me know. I tried different positions on it but it didn't work. it might be because main elements are in a grid and the footer is in the main. I will probably ask Brother Christiansen.
 
 footer {
-  transform: translate(0, 650px);
-  padding-bottom: 2rem;
+  transform: translate(0, 575px);
+  padding: 4rem;
 }
 
 /*Small Version Layout: Footer*/
