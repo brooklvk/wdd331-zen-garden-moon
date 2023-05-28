@@ -10,7 +10,7 @@
 body {
   font-family: "League Spartan", sans-serif;
   font-size: 16px;
-  margin: 1rem 4rem 4rem 2rem;
+  margin: 1rem 2rem 4rem 2rem;
   font-weight: 300;
   position: relative;
   height: 100vh;
@@ -56,7 +56,7 @@ aside {
   grid-template-columns: 1fr;
   justify-items: start;
   margin: 2rem;
-  margin-top: -8rem;
+  margin-top: -24rem;
 }
 
 ul {
@@ -68,11 +68,71 @@ abbr[title] {
   text-decoration: none;
 }
 
-footer {
-  transform: translate(0, 575px);
-  padding: 4rem;
+.main footer {
+  transform: translate(0, 600px);
+  padding-bottom: 2rem;
 }
 
-/*Small Version Layout: Footer*/
+/*Small Version Layout: Footer I am fixing the FlexBox*/
+.main footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #db6c0f;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+footer a {
+  color: #0d1f30;
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  padding: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.zen-validate-html {
+  background-image: url(html.png);
+  padding-top: 30px;
+  position: left;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.zen-validate-css {
+  background-image: url(css.png);
+  position: right;
+  padding-top: 30px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.zen-license {
+  background-image: url(cc.png);
+  position: right;
+  padding-top: 30px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.zen-accessibility {
+  background-image: url(a11y.png);
+  position: right;
+  padding-top: 30px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.zen-github {
+  background-image: url(github.png);
+  position: right;
+  padding-top: 30px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
 
 /*# sourceMappingURL=styles.css.map */
