@@ -1,0 +1,119 @@
+// Variables
+
+//colors used
+//Primary Dark Navy Blue
+// #0D1F30
+// Secondary Orange
+// #DB6C0F
+// color - blueish green
+// #3B6670
+// Color - light blue
+// #8BADA3
+// color - light tan
+//#F0E3C0
+
+//fonts used
+//font-family: 'Comfortaa', cursive;
+//font-family: 'League Spartan', sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@300&display=swap");
+
+//variables
+
+$heading-font: "Comfortaa", cursive;
+$body-font: "League Spartan", sans-serif;
+//margin settings between elements
+$margin-sm: 0.5rem;
+$margin-md: 1rem;
+$margin-lg: 2rem;
+$weight-light: 300;
+$weight-bold: 700;
+$background-color: #0d1f30;
+$font-color: #f0e3c0;
+$accent-color-bright: #db6c0f;
+$accent-color-light: #8bada3;
+$accent-color-medium: #3b6670;
+
+// mixins
+@mixin grid($col...) {
+  display: grid;
+  grid-template-columns: $col;
+}
+
+/* General Styles*/
+/* Reset margin, padding, and box model. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $body-font;
+  font-size: 16px;
+  margin: 1rem 4rem 4rem 2rem;
+  font-weight: $weight-light;
+  position: relative;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $heading-font;
+  font-weight: $weight-bold;
+  margin-bottom: 0.5rem;
+}
+
+ul,
+.intro {
+  margin-bottom: $margin-lg;
+}
+
+p,
+ul {
+  line-height: 1.4;
+}
+
+p,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  margin-bottom: $margin-md;
+}
+
+/* Small Version: Header Layout */
+
+/* Small Version: Main Layout */
+
+.main {
+  @include grid(1fr);
+  justify-items: center;
+  margin: $margin-lg;
+}
+
+aside {
+  @include grid(1fr);
+  justify-items: start;
+  margin: $margin-lg;
+  margin-top: -2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+abbr[title] {
+  text-decoration: none;
+}
+
+//Move Footer to Bottom: This was the only way I could get the footer to move to the bottom. If you know a better way, please let me know. I tried different positions on it but it didn't work. it might be because main elements are in a grid and the footer is in the main. I will probably ask Brother Christiansen.
+
+footer {
+  transform: translate(0, 650px);
+  padding-bottom: 2rem;
+}
+
+/*Small Version Layout: Footer*/
