@@ -5,9 +5,10 @@
 $heading-font: "Comfortaa", cursive;
 $body-font: "League Spartan", sans-serif;
 //margin settings between elements
-$margin-sm: 0.5rem;
-$margin-md: 1rem;
-$margin-lg: 2rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 2rem;
+$space-xlg: 4rem;
 $weight-light: 300;
 $weight-bold: 700;
 $main-dark-color: #0d1f30;
@@ -33,7 +34,7 @@ $accent-color-medium: #3b6670;
 body {
   font-family: $body-font;
   font-size: 16px;
-  margin: 1rem 2rem 4rem 2rem;
+  margin: $space-md $space-lg $space-xlg $space-lg;
   font-weight: $weight-light;
   position: relative;
   height: 100vh;
@@ -49,7 +50,7 @@ h3 {
 
 ul,
 .intro {
-  margin-bottom: $margin-lg;
+  margin-bottom: $space-lg;
 }
 
 p,
@@ -57,12 +58,8 @@ ul {
   line-height: 1.4;
 }
 
-p,
-.explanation,
-.participation,
-.benefits,
-.requirements {
-  margin-bottom: $margin-md;
+p {
+  margin-bottom: $space-md;
 }
 
 /* Small Version: Header Layout */
@@ -73,13 +70,19 @@ p,
   @include grid(1fr);
   position: relative;
   justify-items: center;
-  margin: $margin-lg;
+}
+
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  margin: $space-md $space-lg $space-md $space-lg;
 }
 
 aside {
   @include grid(1fr);
   justify-items: start;
-  margin: $margin-lg;
+  margin: $space-lg;
 }
 
 ul {
@@ -93,15 +96,6 @@ abbr[title] {
 
 //Move Footer to Bottom
 
-.main footer {
-  // transform: translate(0, 600px);
-  position: absolute;
-  bottom: -1000px;
-  left: 0;
-  right: 0;
-  padding-bottom: 2rem;
-}
-
 /*Small Version Layout: Footer I am fixing the FlexBox*/
 
 .main footer {
@@ -109,19 +103,26 @@ abbr[title] {
   justify-content: center;
   flex-direction: column;
   background-color: #db6c0f;
-  padding: 2rem;
+  padding: $space-lg;
   border-radius: 8px;
   width: 100%;
+  padding-bottom: $space-lg;
+  margin: 0;
+
+  position: absolute;
+  bottom: -1000px;
+  left: 0;
+  right: 0;
 }
 
 footer a {
   color: $main-dark-color;
   font-family: $heading-font;
   font-weight: $weight-bold;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
-  padding: 1rem;
-  padding: 1rem;
+  padding: $space-md;
+  padding: $space-md;
   text-decoration: none;
 }
 

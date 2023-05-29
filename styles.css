@@ -34,11 +34,7 @@ ul {
   line-height: 1.4;
 }
 
-p,
-.explanation,
-.participation,
-.benefits,
-.requirements {
+p {
   margin-bottom: 1rem;
 }
 
@@ -49,7 +45,13 @@ p,
   grid-template-columns: 1fr;
   position: relative;
   justify-items: center;
-  margin: 2rem;
+}
+
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  margin: 1rem 2rem 1rem 2rem;
 }
 
 aside {
@@ -68,14 +70,6 @@ abbr[title] {
   text-decoration: none;
 }
 
-.main footer {
-  position: absolute;
-  bottom: -1000px;
-  left: 0;
-  right: 0;
-  padding-bottom: 2rem;
-}
-
 /*Small Version Layout: Footer I am fixing the FlexBox*/
 .main footer {
   display: flex;
@@ -85,13 +79,19 @@ abbr[title] {
   padding: 2rem;
   border-radius: 8px;
   width: 100%;
+  padding-bottom: 2rem;
+  margin: 0;
+  position: absolute;
+  bottom: -1000px;
+  left: 0;
+  right: 0;
 }
 
 footer a {
   color: #0d1f30;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   padding: 1rem;
   padding: 1rem;
