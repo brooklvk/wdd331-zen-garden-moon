@@ -71,6 +71,7 @@ p,
 
 .main {
   @include grid(1fr);
+  position: relative;
   justify-items: center;
   margin: $margin-lg;
 }
@@ -79,7 +80,6 @@ aside {
   @include grid(1fr);
   justify-items: start;
   margin: $margin-lg;
-  margin-top: -24rem;
 }
 
 ul {
@@ -94,7 +94,11 @@ abbr[title] {
 //Move Footer to Bottom
 
 .main footer {
-  transform: translate(0, 600px);
+  // transform: translate(0, 600px);
+  position: absolute;
+  bottom: -1000px;
+  left: 0;
+  right: 0;
   padding-bottom: 2rem;
 }
 
