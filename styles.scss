@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@300&display=swap");
 
+/*RGB Code for Colors In case we need it
+  Cream: rgb(245, 241,226)
+  Deep Blue: rgb(5, 5, 31)
+  Orange: rgb(217,106,22)
+  Light Teal: rgb(123, 158, 163)
+  Dark Teal: rgb(90, 134, 140)
+*/
+
 //variables
 
 $heading-font: "Comfortaa", cursive;
@@ -11,11 +19,11 @@ $space-lg: 2rem;
 $space-xlg: 4rem;
 $weight-light: 300;
 $weight-bold: 700;
-$main-dark-color: #0d1f30;
-$main-light-color: #f0e3c0;
-$accent-color-bright: #db6c0f;
-$accent-color-light: #8bada3;
-$accent-color-medium: #3b6670;
+$main-dark-color: #05051f;
+$main-light-color: #f5f1e2;
+$accent-color-bright: #d96a16;
+$accent-color-light: #7b9ea3;
+$accent-color-medium: #5a868c;
 
 // mixins
 @mixin grid($col...) {
