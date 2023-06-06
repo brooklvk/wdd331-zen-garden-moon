@@ -1,0 +1,25 @@
+Everything is wrapped in a div with a class="page-wrapper" 
+ 
+
+1: section "intro": (This section can use the section element as a wrapper)
+
+header (h1, h2, and moon image
+div "summary" with HTML and CSS download links
+div "preamble" The Road to Enlightenment)
+
+2: div "main supporting" (This section can use the section element as a wrapper)
+
+div "explanation": So What is This About?
+div "participation":  Participation
+div "benefits":  Benefits
+div "requirements": Requirements
+footer (5 links)
+
+3: aside "sidebar" (This article has a div wrapper)
+
+div "design-selection" Select a Design 
+(8 list items with links)
+div "design-archives"
+(2 list items with links)
+div "zen-resources" Resources
+(5 list items with links)

@@ -72,6 +72,13 @@ p {
 
 /* Small Version: Header Layout */
 
+.intro {
+  margin: $space-md $space-lg;
+  margin-top: $space-lg;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Small Version: Main Layout */
 
 .main {
@@ -84,7 +91,7 @@ p {
 .participation,
 .benefits,
 .requirements {
-  margin: $space-md $space-lg $space-md $space-lg;
+  margin: $space-md $space-lg;
 }
 
 aside {
