@@ -46,6 +46,12 @@ p {
   flex-direction: column;
 }
 
+.summary::before {
+  content: url(moon-sm.png);
+  float: right;
+  padding: 1rem;
+}
+
 /* Small Version: Main Layout */
 .main {
   display: grid;

@@ -45,7 +45,7 @@ h2,
 h3 {
   font-family: $heading-font;
   font-weight: $weight-bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: $space-sm;
 }
 
 ul,
@@ -69,6 +69,12 @@ p {
   margin-top: $space-lg;
   display: flex;
   flex-direction: column;
+}
+
+.summary::before {
+  content: url(moon-sm.png);
+  float: right;
+  padding: $space-md;
 }
 
 /* Small Version: Main Layout */
