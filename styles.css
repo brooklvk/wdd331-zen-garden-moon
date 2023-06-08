@@ -2,7 +2,6 @@
 /*RGB Code for Colors In case we need it
   Cream: rgb(245, 241,226)
   Deep Blue: rgb(5, 5, 31)
-  Darker Orange rgb(195, 95, 20) #C35F14
   Orange: rgb(217,106,22)
   Light Teal: rgb(123, 158, 163)
   Dark Teal: rgb(90, 134, 140)
@@ -16,6 +15,7 @@
 }
 
 body {
+  background-color: #05051f;
   font-family: "League Spartan", sans-serif;
   font-size: 16px;
   margin: 1rem 2rem 4rem 2rem;
@@ -27,6 +27,7 @@ body {
 h1,
 h2,
 h3 {
+  color: #5a868c;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -43,7 +44,12 @@ ul {
 }
 
 p {
+  color: #f5f1e2;
   margin-bottom: 1rem;
+}
+
+a {
+  color: #d96a16;
 }
 
 /* Small Version: Header Layout */
@@ -54,10 +60,29 @@ p {
   flex-direction: column;
 }
 
+header h2 {
+  background: linear-gradient(to left, rgb(217, 106, 22) 0%, rgb(5, 5, 31) 100%);
+  background-position: 0 100%;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+  padding-bottom: 10px;
+}
+
+.summary p {
+  color: #5a868c;
+}
+
 .summary::before {
   content: url(moon-sm.png);
   float: right;
   padding: 1rem;
+}
+
+.preamble {
+  background: linear-gradient(to left, rgb(217, 106, 22) 0%, rgb(5, 5, 31) 100%);
+  background-position: 0 100%;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
 }
 
 /* Small Version: Main Layout */
