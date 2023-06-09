@@ -120,21 +120,20 @@ abbr[title] {
 .main footer {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  background-color: #db6c0f;
+  flex-direction: row;
   padding: 2rem;
   border-radius: 8px;
   width: 100%;
   padding-bottom: 2rem;
   margin: 0;
   position: absolute;
-  bottom: -1000px;
+  bottom: -800px;
   left: 0;
   right: 0;
 }
 
 footer a {
-  color: #05051f;
+  color: #5a868c;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
   font-size: 18px;
