@@ -74,7 +74,7 @@ p {
   margin-bottom: $space-md;
 }
 
-/* Small Version: Header Layout */
+/* Small Version: Header Area Layout */
 
 .intro {
   margin: $space-md $space-lg;
@@ -96,7 +96,7 @@ header h2 {
 }
 
 .summary p {
-  color: $accent-color-medium;
+  color: $accent-color-light;
 }
 
 .summary::before {
@@ -110,6 +110,19 @@ header h2 {
   display: block;
 }
 
+.summary p a:link,
+.summary p a:visited {
+  color: $accent-color-bright;
+  font-weight: $weight-regular;
+}
+
+.summary p a:hover {
+  color: $main-light-color;
+}
+
+.summary p a:active {
+  color: $accent-color-medium;
+}
 .preamble {
   background: linear-gradient(
     to left,
@@ -128,10 +141,20 @@ header h2 {
   position: relative;
   justify-items: center;
 }
+/* Main Link Styles*/
 
-.main p a {
+.main p a:link,
+.main p a:visited {
   color: $accent-color-bright;
   font-weight: $weight-regular;
+}
+
+.main p a:hover {
+  color: $accent-color-light;
+}
+
+.main p a:active {
+  color: #5a868c;
 }
 
 .explanation,
@@ -141,30 +164,9 @@ header h2 {
   margin: $space-md $space-lg;
 }
 
-/* Small Version: Aside layout*/
-
-aside {
-  @include grid(1fr);
-  justify-items: start;
-  margin: $space-lg;
-}
-
-aside a {
-  color: $main-light-color;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a,
-abbr[title] {
-  text-decoration: none;
-}
-
 //Move Footer to Bottom
 
-/*Small Version Layout: Footer I am fixing the FlexBox*/
+/*Small Version Footer Layout*/
 
 .zen-validate-html::before {
   content: url(phases-of-the-moon-1.svg);
@@ -223,5 +225,26 @@ footer a {
   font-weight: $weight-bold;
   font-size: 14px;
   text-align: center;
+  text-decoration: none;
+}
+
+/* Small Version: Aside layout*/
+
+aside {
+  @include grid(1fr);
+  justify-items: start;
+  margin: $space-lg;
+}
+
+aside a {
+  color: $main-light-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+abbr[title] {
   text-decoration: none;
 }

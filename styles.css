@@ -48,7 +48,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Small Version: Header Layout */
+/* Small Version: Header Area Layout */
 .intro {
   margin: 1rem 2rem;
   margin-top: 2rem;
@@ -65,7 +65,7 @@ header h2 {
 }
 
 .summary p {
-  color: #5a868c;
+  color: #7b9ea3;
 }
 
 .summary::before {
@@ -73,6 +73,20 @@ header h2 {
   float: right;
   padding: 1rem;
   display: block;
+}
+
+.summary p a:link,
+.summary p a:visited {
+  color: #d96a16;
+  font-weight: 400;
+}
+
+.summary p a:hover {
+  color: #f5f1e2;
+}
+
+.summary p a:active {
+  color: #5a868c;
 }
 
 .preamble {
@@ -90,9 +104,19 @@ header h2 {
   justify-items: center;
 }
 
-.main p a {
+/* Main Link Styles*/
+.main p a:link,
+.main p a:visited {
   color: #d96a16;
   font-weight: 400;
+}
+
+.main p a:hover {
+  color: #7b9ea3;
+}
+
+.main p a:active {
+  color: #5a868c;
 }
 
 .explanation,
@@ -102,28 +126,7 @@ header h2 {
   margin: 1rem 2rem;
 }
 
-/* Small Version: Aside layout*/
-aside {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: start;
-  margin: 2rem;
-}
-
-aside a {
-  color: #f5f1e2;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a,
-abbr[title] {
-  text-decoration: none;
-}
-
-/*Small Version Layout: Footer I am fixing the FlexBox*/
+/*Small Version Footer Layout*/
 .zen-validate-html::before {
   content: url(phases-of-the-moon-1.svg);
   display: block;
@@ -181,6 +184,27 @@ footer a {
   font-weight: 700;
   font-size: 14px;
   text-align: center;
+  text-decoration: none;
+}
+
+/* Small Version: Aside layout*/
+aside {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  margin: 2rem;
+}
+
+aside a {
+  color: #f5f1e2;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+abbr[title] {
   text-decoration: none;
 }
 
