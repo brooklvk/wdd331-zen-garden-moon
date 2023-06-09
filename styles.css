@@ -54,6 +54,7 @@ p {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 header h2 {
@@ -126,7 +127,7 @@ header h2 {
   margin: 1rem 2rem;
 }
 
-/*Small Version Footer Layout*/
+/*Small Version Footer Layout: Move Footer to the Bottom*/
 .zen-validate-html::before {
   content: url(phases-of-the-moon-1.svg);
   display: block;
@@ -176,15 +177,27 @@ footer {
   bottom: -800px;
   left: 0;
   right: 0;
+  transition: transform 3s ease;
 }
 
-footer a {
+footer a:link,
+footer a:visited {
   color: #5a868c;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
   font-size: 14px;
   text-align: center;
   text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+footer a:hover {
+  color: #d96a16;
+  transform: scale(125%);
+}
+
+footer a:active {
+  color: #f5f1e2;
 }
 
 /* Small Version: Aside layout*/
