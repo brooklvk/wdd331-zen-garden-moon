@@ -25,6 +25,7 @@ $main-light-color: #f5f1e2;
 $accent-color-bright: #d96a16;
 $accent-color-light: #7b9ea3;
 $accent-color-medium: #5a868c;
+$body-copy-sm-v: 18px;
 
 // mixins
 @mixin grid($col...) {
@@ -43,11 +44,10 @@ $accent-color-medium: #5a868c;
 body {
   background-color: $main-dark-color;
   font-family: $body-font;
-  font-size: 16px;
+  font-size: $body-copy-sm-v;
   margin: $space-md $space-lg $space-xlg $space-lg;
   font-weight: $weight-light;
   position: relative;
-  height: 100vh;
 }
 
 h1,
@@ -59,6 +59,10 @@ h3 {
   margin-bottom: $space-sm;
 }
 
+h3 {
+  font-size: 22px;
+}
+
 ul,
 .intro {
   margin-bottom: $space-lg;
@@ -66,7 +70,7 @@ ul,
 
 p,
 ul {
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 p {
@@ -77,11 +81,9 @@ p {
 /* Small Version: Header Area Layout */
 
 .intro {
-  margin: $space-md $space-lg;
-  margin-top: $space-lg;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  margin-bottom: $space-lg;
 }
 
 header h2 {
@@ -98,17 +100,25 @@ header h2 {
 
 .summary p {
   color: $accent-color-light;
+  margin-top: $space-md;
+  margin-bottom: $space-lg;
+  font-size: 22px;
+  font-weight: $weight-light;
 }
 
 .summary::before {
   content: url(moon-sm.png);
-  // width: 170px;
-  // height: 170px;
-  // border-radius: 50%;
-  // box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  width: 162px;
+  height: 162px;
+  border-radius: 50%;
+  background: $main-light-color;
+  box-shadow: 0 0 50px $accent-color-light;
   float: right;
   padding: $space-md;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: $space-md 0;
 }
 
 .summary p a:link,
@@ -161,7 +171,9 @@ header h2 {
 .explanation,
 .participation,
 .benefits,
-.requirements {
+.requirements,
+.preamble,
+.summary p:last-child {
   margin: $space-md $space-lg;
 }
 
@@ -224,7 +236,7 @@ footer a:visited {
   color: $accent-color-medium;
   font-family: $heading-font;
   font-weight: $weight-bold;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
   transition: transform 0.25s ease;
@@ -240,6 +252,10 @@ footer a:active {
 }
 
 /* Small Version: Aside layout*/
+
+aside h3 {
+  font-size: 20px;
+}
 
 aside {
   @include grid(1fr);
