@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200,300;400&display=swap");
 
 /*RGB Code for Colors In case we need it
   Cream: rgb(245, 241,226)
@@ -46,7 +46,7 @@ body {
   background-color: $main-dark-color;
   font-family: $body-font;
   font-size: $body-copy-sm-v;
-  margin: $space-md $space-lg $space-xxlg $space-lg;
+  margin: $space-lg $space-lg $space-xxlg $space-lg;
   font-weight: $weight-light;
 }
 
@@ -56,11 +56,12 @@ h3 {
   color: $accent-color-medium;
   font-family: $heading-font;
   font-weight: $weight-bold;
-  margin-bottom: $space-sm;
+  margin-bottom: $space-md;
 }
 
 h3 {
   font-size: 22px;
+  // margin-bottom: 1rem;
 }
 
 ul,
@@ -88,7 +89,7 @@ p {
 
 header h2 {
   background: linear-gradient(
-    to left,
+    to right,
     rgb(217, 106, 22) 0%,
     rgb(5, 5, 31) 100%
   );
@@ -96,11 +97,11 @@ header h2 {
   background-size: 100% 6px;
   background-repeat: repeat-x;
   padding-bottom: 10px;
+  font-size: 28px;
 }
 
 .summary p {
   color: $accent-color-light;
-  margin: $space-md;
   margin-bottom: $space-xlg;
   font-size: 24px;
   font-weight: $weight-light;
@@ -118,7 +119,7 @@ header h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: $space-lg 0;
+  margin: $space-lg 0 $space-lg $space-md;
 }
 
 .summary p:last-child {
@@ -141,7 +142,7 @@ header h2 {
 
 .preamble {
   background: linear-gradient(
-    to left,
+    to right,
     rgb(217, 106, 22) 0%,
     rgb(5, 5, 31) 100%
   );
@@ -224,8 +225,7 @@ footer {
   border-radius: 8px;
   padding-bottom: $space-lg;
   position: absolute;
-  bottom: -800px;
-  left: -2rem;
+  bottom: -900px;
 }
 
 footer a:link,
@@ -236,13 +236,13 @@ footer a:visited {
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  transition: transform 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 footer a:hover {
   color: $accent-color-bright;
   transform: scale(125%);
-  transition: transform 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 footer a:active {

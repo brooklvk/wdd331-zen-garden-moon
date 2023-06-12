@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200,300;400&display=swap");
 /*RGB Code for Colors In case we need it
   Cream: rgb(245, 241,226)
   Deep Blue: rgb(5, 5, 31)
@@ -18,7 +18,7 @@ body {
   background-color: #05051f;
   font-family: "League Spartan", sans-serif;
   font-size: 20px;
-  margin: 1rem 2rem 8rem 2rem;
+  margin: 2rem 2rem 8rem 2rem;
   font-weight: 300;
 }
 
@@ -28,7 +28,7 @@ h3 {
   color: #5a868c;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -58,16 +58,16 @@ p {
 }
 
 header h2 {
-  background: linear-gradient(to left, rgb(217, 106, 22) 0%, rgb(5, 5, 31) 100%);
+  background: linear-gradient(to right, rgb(217, 106, 22) 0%, rgb(5, 5, 31) 100%);
   background-position: 0 100%;
   background-size: 100% 6px;
   background-repeat: repeat-x;
   padding-bottom: 10px;
+  font-size: 28px;
 }
 
 .summary p {
   color: #7b9ea3;
-  margin: 1rem;
   margin-bottom: 4rem;
   font-size: 24px;
   font-weight: 300;
@@ -85,7 +85,7 @@ header h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem 0 2rem 1rem;
 }
 
 .summary p:last-child {
@@ -107,7 +107,7 @@ header h2 {
 }
 
 .preamble {
-  background: linear-gradient(to left, rgb(217, 106, 22) 0%, rgb(5, 5, 31) 100%);
+  background: linear-gradient(to right, rgb(217, 106, 22) 0%, rgb(5, 5, 31) 100%);
   background-position: 0 100%;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -186,8 +186,7 @@ footer {
   border-radius: 8px;
   padding-bottom: 2rem;
   position: absolute;
-  bottom: -800px;
-  left: -2rem;
+  bottom: -900px;
 }
 
 footer a:link,
@@ -198,13 +197,13 @@ footer a:visited {
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  transition: transform 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 footer a:hover {
   color: #d96a16;
   transform: scale(125%);
-  transition: transform 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 footer a:active {
