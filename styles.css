@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200,300;400&display=swap");
 /*RGB Code for Colors In case we need it
   Cream: rgb(245, 241,226)
@@ -232,11 +233,8 @@ abbr[title] {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=styles.css.map */
 /* blue/green side bar with stars*********************************/
-
-.sidebar{
-  
+.sidebar {
   padding: 10px;
   background-color: rgb(90, 134, 140);
   border-radius: 10px;
@@ -246,13 +244,12 @@ abbr[title] {
   margin: 0 auto;
   border-style: solid;
   border-color: #d96a16;
-  border-width: 5px;
-
-  
+  border-width: 7px;
 }
-.sidebar h3{
-  color: rgb(245, 241,226);
-  padding-top:10px;
+
+.sidebar h3 {
+  color: rgb(245, 241, 226);
+  padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
   font-size: 30px;
@@ -264,35 +261,40 @@ abbr[title] {
   background-size: 100% 6px;
   background-repeat: repeat-x;
 }
-.design-selection .designer-name{
+
+.design-selection .designer-name {
   color: rgb(5, 5, 31);
   text-align: center;
 }
-.design-selection .design-name{
-color: rgb(245, 241,226);
-padding:10px;
-display: list-item;
-list-style-type: ' ★ ';
-text-align: center;
+
+.design-selection .design-name {
+  color: rgb(245, 241, 226);
+  padding: 10px;
+  display: list-item;
+  list-style-type: " ★ ";
+  text-align: left;
 }
 
-.design-selection, .design-archives, .zen-resources{
+.design-selection, .design-archives, .zen-resources {
   padding-left: 50px;
   padding-right: 50px;
-text-align: center;
-  
-}
-.design-selection{
-  padding-top: 50px;
-}
- 
-.zen-resources{
-  padding-bottom: 50px;
-}
-.zen-resources ul li a, .design-archives ul li a{
-  padding: 5px;
-  color: rgb(245, 241,226);
-  display: list-item;
-  list-style-type: ' ★ ';
   text-align: center;
 }
+
+.design-selection {
+  padding-top: 50px;
+}
+
+.zen-resources {
+  padding-bottom: 50px;
+}
+
+.zen-resources ul li a, .design-archives ul li a {
+  padding: 5px;
+  color: rgb(245, 241, 226);
+  display: list-item;
+  list-style-type: " ★ ";
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
