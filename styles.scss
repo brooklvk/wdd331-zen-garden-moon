@@ -28,9 +28,10 @@ $accent-color-bright: #d96a16;
 $accent-color-light: #7b9ea3;
 $accent-color-medium: #5a868c;
 $body-copy-sm-v: 1.25rem;
+$into-text-sm-v: 1.5rem;
 $h1-sm-v: 3rem;
 $h2-sm-v: 2rem;
-$h3-sm-v: 1.4rem;
+$h3-sm-v: 1.5rem;
 
 // mixins
 @mixin grid($col...) {
@@ -63,21 +64,10 @@ h3 {
   margin-bottom: $space-md;
 }
 
-.main h3,
-.intro h3 {
-  font-size: $h3-sm-v;
-  margin-bottom: $space-md;
-}
-
-ul,
-.intro {
-  margin-bottom: $space-lg;
-}
-
 p,
 ul {
   line-height: 1.5;
-  letter-spacing: 0.035rem;
+  letter-spacing: 0.01rem;
 }
 
 p {
@@ -91,6 +81,7 @@ p {
   margin: 0 0 $space-xlg 0;
   display: flex;
   flex-direction: column;
+  font-size: $into-text-sm-v;
 }
 
 header h2 {
@@ -113,7 +104,7 @@ header h2 {
 .summary p {
   color: $accent-color-light;
   margin-bottom: $space-lg;
-  font-size: 24px;
+  font-size: $into-text-sm-v;
   font-weight: $weight-xlight;
 }
 
@@ -124,12 +115,11 @@ header h2 {
   border-radius: 50%;
   background: $main-light-color;
   box-shadow: 0 0 50px $accent-color-light;
-  float: right;
   padding: $space-md;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: $space-lg 0 $space-lg $space-md;
+  margin: $space-xlg auto;
 }
 
 .summary p a:link,
@@ -164,7 +154,13 @@ header h2 {
   position: relative;
   justify-items: center;
 }
+
 /* Main Link Styles*/
+
+.main h3 {
+  font-size: $h3-sm-v;
+  margin-bottom: $space-md;
+}
 
 .main p a:link,
 .main p a:visited {
@@ -184,9 +180,8 @@ header h2 {
 .participation,
 .benefits,
 .requirements,
-.preamble,
-.summary p:last-child {
-  margin: $space-md $space-lg;
+.preamble {
+  margin: $space-md 0;
 }
 
 /*Small Version Footer Layout: Move Footer to the Bottom*/
@@ -194,44 +189,43 @@ header h2 {
 .zen-validate-html::before {
   content: url(phases-of-the-moon-1.svg);
   display: block;
-  width: 78px;
+  width: 74px;
 }
 
 .zen-validate-css::before {
   content: url(phases-of-the-moon-2.svg);
   display: block;
-  width: 78px;
+  width: 74px;
 }
 
 .zen-license::before {
   content: url(phases-of-the-moon-3.svg);
   display: block;
-  width: 78px;
+  width: 74px;
 }
 
 .zen-accessibility::before {
   content: url(phases-of-the-moon-4.svg);
   display: block;
-  width: 78px;
+  width: 74px;
 }
 
 .zen-github::before {
   content: url(phases-of-the-moon-5.svg);
   display: block;
-  width: 78px;
+  width: 74px;
 }
 
 footer {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  @include grid(19% 19% 19% 19% 19%);
   justify-items: center;
   align-items: center;
+  justify-content: center;
   width: 100vw;
-  gap: $space-sm;
   border-radius: 8px;
   padding-bottom: $space-lg;
   position: absolute;
-  bottom: -900px;
+  bottom: -1200px;
 }
 
 footer a:link,
@@ -239,7 +233,7 @@ footer a:visited {
   color: $accent-color-medium;
   font-family: $heading-font;
   font-weight: $weight-bold;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
@@ -258,7 +252,7 @@ footer a:active {
 /* Small Version: Aside layout*/
 
 aside h3 {
-  font-size: 20px;
+  font-size: $h3-sm-v;
 }
 
 aside {
@@ -273,6 +267,7 @@ aside a {
 
 ul {
   list-style-type: none;
+  margin-bottom: $space-lg;
 }
 
 a,
