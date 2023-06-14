@@ -72,8 +72,8 @@ header h2 {
 
 .summary::before {
   content: url(moon-sm.png);
-  width: 163px;
-  height: 163px;
+  width: 162px;
+  height: 162px;
   border-radius: 50%;
   background: #f5f1e2;
   box-shadow: 0 0 50px #7b9ea3;
