@@ -31,7 +31,7 @@ $body-copy-sm-v: 1.25rem;
 $into-text-sm-v: 1.5rem;
 $h1-sm-v: 3rem;
 $h2-sm-v: 2rem;
-$h3-sm-v: 1.5rem;
+$h3-sm-v: 1.6rem;
 
 // mixins
 @mixin grid($col...) {
@@ -52,13 +52,12 @@ body {
   font-family: $body-font;
   font-size: $body-copy-sm-v;
   margin: $space-lg $space-lg $space-xxlg $space-lg;
-  font-weight: $weight-xlight;
+  font-weight: $weight-light;
 }
 
 h1,
 h2,
 h3 {
-  color: $accent-color-medium;
   font-family: $heading-font;
   font-weight: $weight-bold;
   margin-bottom: $space-md;
@@ -67,7 +66,7 @@ h3 {
 p,
 ul {
   line-height: 1.5;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.02rem;
 }
 
 p {
@@ -78,23 +77,49 @@ p {
 /* Small Version: Header Area Layout */
 
 .intro {
-  margin: 0 0 $space-xlg 0;
+  // margin: 0 0 $space-lg 0;
   display: flex;
   flex-direction: column;
   font-size: $into-text-sm-v;
 }
 
-header h2 {
+.intro h1 {
+  font-size: $h1-sm-v;
+  // color: $accent-color-bright;
+  background: -webkit-linear-gradient(
+    $accent-color-medium 40%,
+    $accent-color-bright 75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro h2 {
   background: linear-gradient(
     to right,
     rgb(217, 106, 22) 0%,
     rgb(5, 5, 31) 100%
   );
   background-position: 0 100%;
+  background-size: 100% 12px;
+  background-repeat: repeat-x;
+  padding-bottom: 24px;
+  font-size: $h2-sm-v;
+  color: $accent-color-medium;
+}
+
+.intro h3 {
+  background: linear-gradient(
+    to left,
+    rgb(5, 5, 31) 0%,
+    rgb(217, 106, 22) 100%
+  );
+  background-position: 5% 100%;
   background-size: 100% 6px;
   background-repeat: repeat-x;
-  padding-bottom: 10px;
-  font-size: 28px;
+  padding-bottom: 12px;
+  color: $accent-color-medium;
+  font-size: $h3-sm-v;
 }
 
 .summary {
@@ -110,11 +135,11 @@ header h2 {
 
 .summary::before {
   content: url(moon-sm.png);
-  width: 162px;
-  height: 162px;
+  width: 161px;
+  height: 161px;
   border-radius: 50%;
   background: $main-light-color;
-  box-shadow: 0 0 50px $accent-color-light;
+  box-shadow: 0 0 100px $accent-color-light;
   padding: $space-md;
   display: flex;
   justify-content: center;
@@ -137,14 +162,15 @@ header h2 {
 }
 
 .preamble {
-  background: linear-gradient(
-    to right,
-    rgb(217, 106, 22) 0%,
-    rgb(5, 5, 31) 100%
-  );
-  background-position: 0 100%;
-  background-size: 100% 6px;
-  background-repeat: repeat-x;
+  // background: linear-gradient(
+  //   to right,
+  //   rgb(217, 106, 22) 0%,
+  //   rgb(5, 5, 31) 100%
+  // );
+  // background-position: 0 100%;
+  // background-size: 100% 6px;
+  // background-repeat: repeat-x;
+  font-size: $body-copy-sm-v;
 }
 
 /* Small Version: Main Layout */
@@ -153,6 +179,7 @@ header h2 {
   @include grid(1fr);
   position: relative;
   justify-items: center;
+  margin-bottom: $space-md;
 }
 
 /* Main Link Styles*/
@@ -160,12 +187,26 @@ header h2 {
 .main h3 {
   font-size: $h3-sm-v;
   margin-bottom: $space-md;
+  background: linear-gradient(
+    to left,
+    rgb(5, 5, 31) 0%,
+    rgb(217, 106, 22) 100%
+  );
+  background-position: 5% 100%;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+  padding-bottom: 12px;
+  color: $accent-color-medium;
+}
+
+.main p {
+  font-weight: $weight-xlight;
 }
 
 .main p a:link,
 .main p a:visited {
   color: $accent-color-bright;
-  font-weight: $weight-regular;
+  font-weight: $weight-light;
 }
 
 .main p a:hover {
@@ -225,7 +266,7 @@ footer {
   border-radius: 8px;
   padding-bottom: $space-lg;
   position: absolute;
-  bottom: -1200px;
+  bottom: -1735px;
 }
 
 footer a:link,
@@ -257,7 +298,7 @@ aside h3 {
 
 aside {
   @include grid(1fr);
-  justify-items: start;
+  justify-items: center;
   margin: $space-lg;
 }
 
@@ -273,4 +314,74 @@ ul {
 a,
 abbr[title] {
   text-decoration: none;
+}
+
+/* blue/green side bar with stars*********************************/
+
+.sidebar {
+  padding: 12px;
+  background-color: rgb(90, 134, 140);
+  border-radius: 10px;
+  text-align: center;
+  max-width: fit-content;
+  /*position: absolute; left: 50%; margin-left: -50px;  margin-top: -50px;*/
+  margin: 0 auto;
+  border: 6px solid $accent-color-bright;
+}
+.sidebar h3 {
+  color: rgb(245, 241, 226);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: $h3-sm-v;
+  /*background:linear-gradient(rgb(245, 241,226), rgb(123, 158, 163))*/
+  /*background-clip:text;
+  background: linear-gradient(to bottom, rgb(217,106,22) 0%, rgb(5, 5, 31) 100%);*/
+  background: linear-gradient(
+    to left,
+    rgb(5, 5, 31) 0%,
+    rgb(217, 106, 22) 100%
+  );
+  background-position: 0 100%;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+}
+.design-selection,
+.designer-name {
+  color: rgb(5, 5, 31);
+  text-align: center;
+}
+
+.design-selection .design-name {
+  color: rgb(245, 241, 226);
+  padding: 10px;
+  display: list-item;
+  list-style-type: " ★ ";
+  text-align: center;
+  font-weight: $weight-regular;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+.design-selection {
+  padding-top: 50px;
+}
+
+.zen-resources {
+  padding-bottom: 50px;
+}
+
+.zen-resources ul li a,
+.design-archives ul li a {
+  padding: 5px;
+  color: rgb(245, 241, 226);
+  display: list-item;
+  list-style-type: " ★ ";
+  text-align: center;
+  font-weight: $weight-regular;
 }

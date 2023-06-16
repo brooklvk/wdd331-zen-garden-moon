@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200,300;400&display=swap");
 /*RGB Code for Colors In case we need it
   Cream: rgb(245, 241,226)
@@ -19,13 +20,12 @@ body {
   font-family: "League Spartan", sans-serif;
   font-size: 1.25rem;
   margin: 2rem 2rem 8rem 2rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 h1,
 h2,
 h3 {
-  color: #5a868c;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -34,7 +34,7 @@ h3 {
 p,
 ul {
   line-height: 1.5;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.02rem;
 }
 
 p {
@@ -44,19 +44,36 @@ p {
 
 /* Small Version: Header Area Layout */
 .intro {
-  margin: 0 0 4rem 0;
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
 }
 
-header h2 {
+.intro h1 {
+  font-size: 3rem;
+  background: -webkit-linear-gradient(#5a868c 40%, #d96a16 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro h2 {
   background: linear-gradient(to right, rgb(217, 106, 22) 0%, rgb(5, 5, 31) 100%);
   background-position: 0 100%;
+  background-size: 100% 12px;
+  background-repeat: repeat-x;
+  padding-bottom: 24px;
+  font-size: 2rem;
+  color: #5a868c;
+}
+
+.intro h3 {
+  background: linear-gradient(to left, rgb(5, 5, 31) 0%, rgb(217, 106, 22) 100%);
+  background-position: 5% 100%;
   background-size: 100% 6px;
   background-repeat: repeat-x;
-  padding-bottom: 10px;
-  font-size: 28px;
+  padding-bottom: 12px;
+  color: #5a868c;
+  font-size: 1.6rem;
 }
 
 .summary {
@@ -72,11 +89,11 @@ header h2 {
 
 .summary::before {
   content: url(moon-sm.png);
-  width: 162px;
-  height: 162px;
+  width: 161px;
+  height: 161px;
   border-radius: 50%;
   background: #f5f1e2;
-  box-shadow: 0 0 50px #7b9ea3;
+  box-shadow: 0 0 100px #7b9ea3;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -99,10 +116,7 @@ header h2 {
 }
 
 .preamble {
-  background: linear-gradient(to right, rgb(217, 106, 22) 0%, rgb(5, 5, 31) 100%);
-  background-position: 0 100%;
-  background-size: 100% 6px;
-  background-repeat: repeat-x;
+  font-size: 1.25rem;
 }
 
 /* Small Version: Main Layout */
@@ -111,18 +125,29 @@ header h2 {
   grid-template-columns: 1fr;
   position: relative;
   justify-items: center;
+  margin-bottom: 1rem;
 }
 
 /* Main Link Styles*/
 .main h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
+  background: linear-gradient(to left, rgb(5, 5, 31) 0%, rgb(217, 106, 22) 100%);
+  background-position: 5% 100%;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+  padding-bottom: 12px;
+  color: #5a868c;
+}
+
+.main p {
+  font-weight: 200;
 }
 
 .main p a:link,
 .main p a:visited {
   color: #d96a16;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .main p a:hover {
@@ -182,7 +207,7 @@ footer {
   border-radius: 8px;
   padding-bottom: 2rem;
   position: absolute;
-  bottom: -1200px;
+  bottom: -1735px;
 }
 
 footer a:link,
@@ -208,13 +233,13 @@ footer a:active {
 
 /* Small Version: Aside layout*/
 aside h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 aside {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: start;
+  justify-items: center;
   margin: 2rem;
 }
 
@@ -230,6 +255,74 @@ ul {
 a,
 abbr[title] {
   text-decoration: none;
+}
+
+/* blue/green side bar with stars*********************************/
+.sidebar {
+  padding: 12px;
+  background-color: rgb(90, 134, 140);
+  border-radius: 10px;
+  text-align: center;
+  max-width: fit-content;
+  /*position: absolute; left: 50%; margin-left: -50px;  margin-top: -50px;*/
+  margin: 0 auto;
+  border: 6px solid #d96a16;
+}
+
+.sidebar h3 {
+  color: rgb(245, 241, 226);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 1.6rem;
+  /*background:linear-gradient(rgb(245, 241,226), rgb(123, 158, 163))*/
+  /*background-clip:text;
+  background: linear-gradient(to bottom, rgb(217,106,22) 0%, rgb(5, 5, 31) 100%);*/
+  background: linear-gradient(to left, rgb(5, 5, 31) 0%, rgb(217, 106, 22) 100%);
+  background-position: 0 100%;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+}
+
+.design-selection,
+.designer-name {
+  color: rgb(5, 5, 31);
+  text-align: center;
+}
+
+.design-selection .design-name {
+  color: rgb(245, 241, 226);
+  padding: 10px;
+  display: list-item;
+  list-style-type: " ★ ";
+  text-align: center;
+  font-weight: 400;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+
+.design-selection {
+  padding-top: 50px;
+}
+
+.zen-resources {
+  padding-bottom: 50px;
+}
+
+.zen-resources ul li a,
+.design-archives ul li a {
+  padding: 5px;
+  color: rgb(245, 241, 226);
+  display: list-item;
+  list-style-type: " ★ ";
+  text-align: center;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=styles.css.map */
