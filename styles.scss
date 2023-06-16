@@ -101,9 +101,8 @@ p {
   font-size: $h1-sm-v;
   // color: $accent-color-bright;
   background: -webkit-linear-gradient(
-    $accent-color-medium 8%,
-    $accent-color-light,
-    $accent-color-medium 92%
+    $accent-color-bright 5%,
+    $accent-color-medium 85%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
