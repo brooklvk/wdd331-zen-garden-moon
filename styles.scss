@@ -18,7 +18,7 @@ $space-md: 1rem;
 $space-lg: 2rem;
 $space-xlg: 4rem;
 $space-xxlg: 6rem;
-$space-xxxlg: 12rem;
+$space-xxxlg: 14rem;
 $weight-xlight: 200;
 $weight-light: 300;
 $weight-regular: 400;
@@ -28,11 +28,12 @@ $main-light-color: #f5f1e2;
 $accent-color-bright: #d96a16;
 $accent-color-light: #7b9ea3;
 $accent-color-medium: #5a868c;
-$body-copy-sm-v: 1.25rem;
 $intro-text-sm-v: 1.5rem;
-$h1-sm-v: 3rem;
-$h2-sm-v: 1.75rem;
-$h3-sm-v: 1.6rem;
+$body-copy-sm-v: 1.25rem;
+$footer-text: 1rem;
+$h1-sm-v: 2.25rem;
+$h2-sm-v: 1.5rem;
+$h3-sm-v: 1.5rem;
 
 // mixins
 @mixin grid($col...) {
@@ -46,6 +47,12 @@ $h3-sm-v: 1.6rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 html {
@@ -65,12 +72,14 @@ h3 {
   font-family: $heading-font;
   font-weight: $weight-bold;
   margin-bottom: $space-md;
+  letter-spacing: 0.05rem;
+  line-height: 1.15;
 }
 
 p,
 ul {
   line-height: 1.5;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.03rem;
   margin-bottom: $space-lg;
 }
 
@@ -92,13 +101,13 @@ p {
   font-size: $h1-sm-v;
   // color: $accent-color-bright;
   background: -webkit-linear-gradient(
-    $accent-color-bright 10%,
-    $accent-color-medium 85%
+    $accent-color-medium 8%,
+    $accent-color-light,
+    $accent-color-medium 92%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
-  letter-spacing: 0.05rem;
 }
 
 .intro h2 {
@@ -114,8 +123,6 @@ p {
   font-size: $h2-sm-v;
   color: $accent-color-medium;
   font-weight: $weight-light;
-  line-height: 1.1;
-  letter-spacing: 0.05rem;
 }
 
 .intro h3 {
@@ -145,6 +152,7 @@ p {
 
 .summary p:nth-child(2) {
   font-size: $body-copy-sm-v;
+  font-style: italic;
 }
 
 .summary::before {
@@ -185,7 +193,6 @@ p {
   // background-size: 100% 6px;
   // background-repeat: repeat-x;
   font-size: $body-copy-sm-v;
-  font-weight: $weight-xlight;
 }
 
 /* Small Version: Main Layout */
@@ -211,10 +218,6 @@ p {
   color: $accent-color-medium;
 }
 
-.main p {
-  font-weight: $weight-xlight;
-}
-
 .main p a:link,
 .main p a:visited {
   color: $accent-color-bright;
@@ -234,6 +237,7 @@ p {
 .benefits,
 .requirements {
   margin: 0 0 $space-xlg 0;
+  font-weight: $weight-xlight;
 }
 
 /*Small Version Footer Layout: Move Footer to the Bottom*/
@@ -279,7 +283,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 0 0 3rem 0;
+  padding: 0 0 4rem 0;
 }
 
 footer a:link,
@@ -287,7 +291,7 @@ footer a:visited {
   color: $accent-color-medium;
   font-family: $heading-font;
   font-weight: $weight-bold;
-  font-size: 14px;
+  font-size: 1rem;
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
@@ -324,7 +328,12 @@ abbr[title] {
 
 .sidebar {
   padding: 12px;
-  background-color: rgb(90, 134, 140);
+  background: linear-gradient(
+    to left,
+    $accent-color-medium 5%,
+    $accent-color-light,
+    $accent-color-medium 95%
+  );
   border-radius: 10px;
   text-align: center;
   max-width: fit-content;

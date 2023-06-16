@@ -15,6 +15,12 @@
   box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 html {
   position: relative;
 }
@@ -23,7 +29,7 @@ body {
   background-color: #05051f;
   font-family: "League Spartan", sans-serif;
   font-size: 1.25rem;
-  margin: 6rem 2rem 12rem 2rem;
+  margin: 6rem 2rem 14rem 2rem;
 }
 
 h1,
@@ -32,12 +38,14 @@ h3 {
   font-family: "Comfortaa", cursive;
   font-weight: 700;
   margin-bottom: 1rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.15;
 }
 
 p,
 ul {
   line-height: 1.5;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.03rem;
   margin-bottom: 2rem;
 }
 
@@ -54,12 +62,11 @@ p {
 }
 
 .intro h1 {
-  font-size: 3rem;
-  background: -webkit-linear-gradient(#d96a16 10%, #5a868c 85%);
+  font-size: 2.25rem;
+  background: -webkit-linear-gradient(#5a868c 8%, #7b9ea3, #5a868c 92%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
-  letter-spacing: 0.05rem;
 }
 
 .intro h2 {
@@ -68,11 +75,9 @@ p {
   background-size: 100% 9px;
   background-repeat: repeat-x;
   padding-bottom: 18px;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: #5a868c;
   font-weight: 300;
-  line-height: 1.1;
-  letter-spacing: 0.05rem;
 }
 
 .intro h3 {
@@ -82,7 +87,7 @@ p {
   background-repeat: repeat-x;
   padding-bottom: 12px;
   color: #5a868c;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .summary {
@@ -98,6 +103,7 @@ p {
 
 .summary p:nth-child(2) {
   font-size: 1.25rem;
+  font-style: italic;
 }
 
 .summary::before {
@@ -130,7 +136,6 @@ p {
 
 .preamble {
   font-size: 1.25rem;
-  font-weight: 200;
 }
 
 /* Small Version: Main Layout */
@@ -140,7 +145,7 @@ p {
 
 /* Main Link Styles*/
 .main h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   background: linear-gradient(to left, #05051f 0%, #d96a16 100%);
   background-position: 0 100%;
@@ -148,10 +153,6 @@ p {
   background-repeat: no-repeat;
   padding-bottom: 12px;
   color: #5a868c;
-}
-
-.main p {
-  font-weight: 200;
 }
 
 .main p a:link,
@@ -174,6 +175,7 @@ p {
 .benefits,
 .requirements {
   margin: 0 0 4rem 0;
+  font-weight: 200;
 }
 
 /*Small Version Footer Layout: Move Footer to the Bottom*/
@@ -218,7 +220,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 0 0 3rem 0;
+  padding: 0 0 4rem 0;
 }
 
 footer a:link,
@@ -226,7 +228,7 @@ footer a:visited {
   color: #5a868c;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1rem;
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
@@ -262,7 +264,7 @@ abbr[title] {
 /* blue/green side bar with stars*********************************/
 .sidebar {
   padding: 12px;
-  background-color: rgb(90, 134, 140);
+  background: linear-gradient(to left, #5a868c 5%, #7b9ea3, #5a868c 95%);
   border-radius: 10px;
   text-align: center;
   max-width: fit-content;
@@ -276,7 +278,7 @@ abbr[title] {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   /*background:linear-gradient(rgb(245, 241,226), rgb(123, 158, 163))*/
   /*background-clip:text;
   background: linear-gradient(to bottom, rgb(217,106,22) 0%, rgb(5, 5, 31) 100%);*/
