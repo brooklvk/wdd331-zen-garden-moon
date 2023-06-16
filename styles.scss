@@ -17,7 +17,8 @@ $space-sm: 0.5rem;
 $space-md: 1rem;
 $space-lg: 2rem;
 $space-xlg: 4rem;
-$space-xxlg: 8rem;
+$space-xxlg: 6rem;
+$space-xxxlg: 12rem;
 $weight-xlight: 200;
 $weight-light: 300;
 $weight-regular: 400;
@@ -28,9 +29,9 @@ $accent-color-bright: #d96a16;
 $accent-color-light: #7b9ea3;
 $accent-color-medium: #5a868c;
 $body-copy-sm-v: 1.25rem;
-$into-text-sm-v: 1.5rem;
+$intro-text-sm-v: 1.5rem;
 $h1-sm-v: 3rem;
-$h2-sm-v: 2rem;
+$h2-sm-v: 1.75rem;
 $h3-sm-v: 1.6rem;
 
 // mixins
@@ -47,12 +48,15 @@ $h3-sm-v: 1.6rem;
   box-sizing: border-box;
 }
 
+html {
+  position: relative;
+}
+
 body {
   background-color: $main-dark-color;
   font-family: $body-font;
   font-size: $body-copy-sm-v;
-  margin: $space-lg $space-lg $space-xxlg $space-lg;
-  font-weight: $weight-light;
+  margin: $space-xxlg $space-lg $space-xxxlg $space-lg;
 }
 
 h1,
@@ -66,7 +70,8 @@ h3 {
 p,
 ul {
   line-height: 1.5;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.025rem;
+  margin-bottom: $space-lg;
 }
 
 p {
@@ -80,18 +85,20 @@ p {
   // margin: 0 0 $space-lg 0;
   display: flex;
   flex-direction: column;
-  font-size: $into-text-sm-v;
+  font-size: $intro-text-sm-v;
 }
 
 .intro h1 {
   font-size: $h1-sm-v;
   // color: $accent-color-bright;
   background: -webkit-linear-gradient(
-    $accent-color-medium 40%,
-    $accent-color-bright 75%
+    $accent-color-bright 10%,
+    $accent-color-medium 85%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 1;
+  letter-spacing: 0.05rem;
 }
 
 .intro h2 {
@@ -101,11 +108,14 @@ p {
     rgb(5, 5, 31) 100%
   );
   background-position: 0 100%;
-  background-size: 100% 12px;
+  background-size: 100% 9px;
   background-repeat: repeat-x;
-  padding-bottom: 24px;
+  padding-bottom: 18px;
   font-size: $h2-sm-v;
   color: $accent-color-medium;
+  font-weight: $weight-light;
+  line-height: 1.1;
+  letter-spacing: 0.05rem;
 }
 
 .intro h3 {
@@ -129,8 +139,12 @@ p {
 .summary p {
   color: $accent-color-light;
   margin-bottom: $space-lg;
-  font-size: $into-text-sm-v;
+  font-size: $intro-text-sm-v;
   font-weight: $weight-xlight;
+}
+
+.summary p:nth-child(2) {
+  font-size: $body-copy-sm-v;
 }
 
 .summary::before {
@@ -150,7 +164,7 @@ p {
 .summary p a:link,
 .summary p a:visited {
   color: $accent-color-bright;
-  font-weight: $weight-regular;
+  font-weight: $weight-light;
 }
 
 .summary p a:hover {
@@ -171,15 +185,13 @@ p {
   // background-size: 100% 6px;
   // background-repeat: repeat-x;
   font-size: $body-copy-sm-v;
+  font-weight: $weight-xlight;
 }
 
 /* Small Version: Main Layout */
 
 .main {
-  @include grid(1fr);
-  position: relative;
-  justify-items: center;
-  margin-bottom: $space-md;
+  margin: 0 auto $space-xlg auto;
 }
 
 /* Main Link Styles*/
@@ -189,12 +201,12 @@ p {
   margin-bottom: $space-md;
   background: linear-gradient(
     to left,
-    rgb(5, 5, 31) 0%,
-    rgb(217, 106, 22) 100%
+    $main-dark-color 0%,
+    $accent-color-bright 100%
   );
-  background-position: 5% 100%;
+  background-position: 0 100%;
   background-size: 100% 6px;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   padding-bottom: 12px;
   color: $accent-color-medium;
 }
@@ -216,13 +228,12 @@ p {
 .main p a:active {
   color: #5a868c;
 }
-
+.preamble,
 .explanation,
 .participation,
 .benefits,
-.requirements,
-.preamble {
-  margin: $space-md 0;
+.requirements {
+  margin: 0 0 $space-xlg 0;
 }
 
 /*Small Version Footer Layout: Move Footer to the Bottom*/
@@ -258,15 +269,17 @@ p {
 }
 
 footer {
-  @include grid(19% 19% 19% 19% 19%);
+  display: grid;
+  grid-template-columns: repeat(5, 19%);
   justify-items: center;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  border-radius: 8px;
-  padding-bottom: $space-lg;
+  align-self: end;
+  width: 100%;
   position: absolute;
-  bottom: -1735px;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 3rem 0;
 }
 
 footer a:link,
@@ -292,23 +305,14 @@ footer a:active {
 
 /* Small Version: Aside layout*/
 
-aside h3 {
-  font-size: $h3-sm-v;
-}
-
 aside {
   @include grid(1fr);
   justify-items: center;
-  margin: $space-lg;
 }
 
 aside a {
   color: $main-light-color;
-}
-
-ul {
-  list-style-type: none;
-  margin-bottom: $space-lg;
+  font-weight: $weight-regular;
 }
 
 a,
@@ -364,8 +368,8 @@ abbr[title] {
 .design-selection,
 .design-archives,
 .zen-resources {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
   text-align: center;
 }
 .design-selection {
@@ -373,7 +377,7 @@ abbr[title] {
 }
 
 .zen-resources {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .zen-resources ul li a,

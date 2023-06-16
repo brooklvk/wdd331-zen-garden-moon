@@ -15,12 +15,15 @@
   box-sizing: border-box;
 }
 
+html {
+  position: relative;
+}
+
 body {
   background-color: #05051f;
   font-family: "League Spartan", sans-serif;
   font-size: 1.25rem;
-  margin: 2rem 2rem 8rem 2rem;
-  font-weight: 300;
+  margin: 6rem 2rem 12rem 2rem;
 }
 
 h1,
@@ -34,7 +37,8 @@ h3 {
 p,
 ul {
   line-height: 1.5;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.025rem;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -51,19 +55,24 @@ p {
 
 .intro h1 {
   font-size: 3rem;
-  background: -webkit-linear-gradient(#5a868c 40%, #d96a16 75%);
+  background: -webkit-linear-gradient(#d96a16 10%, #5a868c 85%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 1;
+  letter-spacing: 0.05rem;
 }
 
 .intro h2 {
   background: linear-gradient(to right, rgb(217, 106, 22) 0%, rgb(5, 5, 31) 100%);
   background-position: 0 100%;
-  background-size: 100% 12px;
+  background-size: 100% 9px;
   background-repeat: repeat-x;
-  padding-bottom: 24px;
-  font-size: 2rem;
+  padding-bottom: 18px;
+  font-size: 1.75rem;
   color: #5a868c;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.05rem;
 }
 
 .intro h3 {
@@ -87,6 +96,10 @@ p {
   font-weight: 200;
 }
 
+.summary p:nth-child(2) {
+  font-size: 1.25rem;
+}
+
 .summary::before {
   content: url(moon-sm.png);
   width: 161px;
@@ -104,7 +117,7 @@ p {
 .summary p a:link,
 .summary p a:visited {
   color: #d96a16;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .summary p a:hover {
@@ -117,25 +130,22 @@ p {
 
 .preamble {
   font-size: 1.25rem;
+  font-weight: 200;
 }
 
 /* Small Version: Main Layout */
 .main {
-  display: grid;
-  grid-template-columns: 1fr;
-  position: relative;
-  justify-items: center;
-  margin-bottom: 1rem;
+  margin: 0 auto 4rem auto;
 }
 
 /* Main Link Styles*/
 .main h3 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  background: linear-gradient(to left, rgb(5, 5, 31) 0%, rgb(217, 106, 22) 100%);
-  background-position: 5% 100%;
+  background: linear-gradient(to left, #05051f 0%, #d96a16 100%);
+  background-position: 0 100%;
   background-size: 100% 6px;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   padding-bottom: 12px;
   color: #5a868c;
 }
@@ -158,12 +168,12 @@ p {
   color: #5a868c;
 }
 
+.preamble,
 .explanation,
 .participation,
 .benefits,
-.requirements,
-.preamble {
-  margin: 1rem 0;
+.requirements {
+  margin: 0 0 4rem 0;
 }
 
 /*Small Version Footer Layout: Move Footer to the Bottom*/
@@ -199,15 +209,16 @@ p {
 
 footer {
   display: grid;
-  grid-template-columns: 19% 19% 19% 19% 19%;
+  grid-template-columns: repeat(5, 19%);
   justify-items: center;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  border-radius: 8px;
-  padding-bottom: 2rem;
+  align-self: end;
+  width: 100%;
   position: absolute;
-  bottom: -1735px;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 3rem 0;
 }
 
 footer a:link,
@@ -232,24 +243,15 @@ footer a:active {
 }
 
 /* Small Version: Aside layout*/
-aside h3 {
-  font-size: 1.6rem;
-}
-
 aside {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  margin: 2rem;
 }
 
 aside a {
   color: #f5f1e2;
-}
-
-ul {
-  list-style-type: none;
-  margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 a,
@@ -302,8 +304,8 @@ abbr[title] {
 .design-selection,
 .design-archives,
 .zen-resources {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
   text-align: center;
 }
 
@@ -312,7 +314,7 @@ abbr[title] {
 }
 
 .zen-resources {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .zen-resources ul li a,
