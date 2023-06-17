@@ -15,6 +15,7 @@ $body-font: "League Spartan", sans-serif;
 //margin settings between elements
 $space-sm: 0.5rem;
 $space-md: 1rem;
+$space-mdlg: 1.5rem;
 $space-lg: 2rem;
 $space-xlg: 4rem;
 $space-xxlg: 6rem;
@@ -80,7 +81,7 @@ p,
 ul {
   line-height: 1.5;
   letter-spacing: 0.03rem;
-  margin-bottom: $space-lg;
+  margin-bottom: $space-mdlg;
 }
 
 p {
@@ -91,7 +92,6 @@ p {
 /* Small Version: Header Area Layout */
 
 .intro {
-  // margin: 0 0 $space-lg 0;
   display: flex;
   flex-direction: column;
   font-size: $intro-text-sm-v;
