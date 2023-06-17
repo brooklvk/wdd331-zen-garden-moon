@@ -118,7 +118,7 @@ p {
   background-position: 0 100%;
   background-size: 100% 9px;
   background-repeat: repeat-x;
-  padding-bottom: 18px;
+  padding-bottom: $space-mdlg;
   font-size: $h2-sm-v;
   color: $accent-color-medium;
   font-weight: $weight-light;
@@ -133,9 +133,10 @@ p {
   background-position: 5% 100%;
   background-size: 100% 6px;
   background-repeat: repeat-x;
-  padding-bottom: 12px;
+  padding-bottom: $space-md;
   color: $accent-color-medium;
   font-size: $h3-sm-v;
+  margin-bottom: $space-mdlg;
 }
 
 .summary {
@@ -204,7 +205,7 @@ p {
 
 .main h3 {
   font-size: $h3-sm-v;
-  margin-bottom: $space-md;
+  margin-bottom: $space-mdlg;
   background: linear-gradient(
     to left,
     $main-dark-color 0%,
@@ -213,7 +214,7 @@ p {
   background-position: 0 100%;
   background-size: 100% 6px;
   background-repeat: no-repeat;
-  padding-bottom: 12px;
+  padding-bottom: $space-md;
   color: $accent-color-medium;
 }
 

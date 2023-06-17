@@ -74,7 +74,7 @@ p {
   background-position: 0 100%;
   background-size: 100% 9px;
   background-repeat: repeat-x;
-  padding-bottom: 18px;
+  padding-bottom: 1.5rem;
   font-size: 1.5rem;
   color: #5a868c;
   font-weight: 300;
@@ -85,9 +85,10 @@ p {
   background-position: 5% 100%;
   background-size: 100% 6px;
   background-repeat: repeat-x;
-  padding-bottom: 12px;
+  padding-bottom: 1rem;
   color: #5a868c;
   font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .summary {
@@ -146,12 +147,12 @@ p {
 /* Main Link Styles*/
 .main h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background: linear-gradient(to left, #05051f 0%, #d96a16 100%);
   background-position: 0 100%;
   background-size: 100% 6px;
   background-repeat: no-repeat;
-  padding-bottom: 12px;
+  padding-bottom: 1rem;
   color: #5a868c;
 }
 
