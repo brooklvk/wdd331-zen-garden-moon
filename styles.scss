@@ -107,6 +107,10 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
+  // writing-mode: vertical-rl;
+  // text-orientation: upright;
+  // text-transform: uppercase;
+  // word-spacing: -1.25rem;
 }
 
 .intro h2 {
