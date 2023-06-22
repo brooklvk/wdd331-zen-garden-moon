@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200,300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200,300;400;600&display=swap");
 
 /*RGB Code for Colors In case we need it
   Cream: rgb(245, 241,226)
@@ -23,6 +23,7 @@ $space-xxxlg: 14rem;
 $weight-xlight: 200;
 $weight-light: 300;
 $weight-regular: 400;
+$weight-hover: 600;
 $weight-bold: 700;
 $main-dark-color: #05051f;
 $main-light-color: #f5f1e2;
@@ -42,18 +43,19 @@ $h3-sm-v: 1.5rem;
   grid-template-columns: $col;
 }
 
+@mixin hover() {
+  transition: all 0.15s ease-in;
+}
+
 /* General Styles*/
 /* Reset margin, padding, and box model. */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -80,13 +82,13 @@ h3 {
 p,
 ul {
   line-height: 1.5;
-  letter-spacing: 0.03rem;
   margin-bottom: $space-mdlg;
 }
 
 p {
   color: $main-light-color;
   margin-bottom: $space-md;
+  letter-spacing: 0.03rem;
 }
 
 /* Small Version: Header Area Layout */
@@ -230,6 +232,8 @@ p {
 
 .main p a:hover {
   color: $accent-color-light;
+  font-weight: $weight-regular;
+  @include hover;
 }
 
 .main p a:active {
@@ -313,18 +317,12 @@ footer a:active {
 
 /* Small Version: Aside layout*/
 
-aside {
-  @include grid(1fr);
-  justify-items: center;
-}
-
-aside a {
-  color: $main-light-color;
-  font-weight: $weight-regular;
+ul {
+  list-style: none;
 }
 
 a,
-abbr[title] {
+h2 abbr {
   text-decoration: none;
 }
 
@@ -339,21 +337,16 @@ abbr[title] {
     $accent-color-medium 95%
   );
   border-radius: 10px;
-  text-align: center;
-  max-width: fit-content;
-  /*position: absolute; left: 50%; margin-left: -50px;  margin-top: -50px;*/
+  max-width: max-content;
   margin: 0 auto;
   border: 6px solid $accent-color-bright;
 }
 .sidebar h3 {
   color: rgb(245, 241, 226);
-  padding-top: 10px;
+  margin-top: 10px;
   padding-bottom: 10px;
   text-align: center;
   font-size: $h3-sm-v;
-  /*background:linear-gradient(rgb(245, 241,226), rgb(123, 158, 163))*/
-  /*background-clip:text;
-  background: linear-gradient(to bottom, rgb(217,106,22) 0%, rgb(5, 5, 31) 100%);*/
   background: linear-gradient(
     to left,
     rgb(5, 5, 31) 0%,
@@ -363,19 +356,67 @@ abbr[title] {
   background-size: 100% 6px;
   background-repeat: repeat-x;
 }
-.design-selection,
-.designer-name {
-  color: rgb(5, 5, 31);
-  text-align: center;
+
+/* Aside: Link & Visited ******************* */
+
+.designer-name:link,
+.designer-name:visited {
+  color: $main-dark-color;
 }
 
-.design-selection .design-name {
-  color: rgb(245, 241, 226);
-  padding: 10px;
+.design-name:link,
+.design-name:visited {
+  color: $main-light-color;
+  margin: 12px 0 -2px 0;
+  padding: 0;
   display: list-item;
   list-style-type: " ★ ";
-  text-align: center;
-  font-weight: $weight-regular;
+}
+
+.zen-resources a:link,
+.zen-resources a:visited,
+.design-archives a:link,
+.design-archives a:visited {
+  padding: 5px 0;
+  color: $main-light-color;
+  display: list-item;
+  list-style-type: " ★ ";
+}
+
+/* Aside: Hover ***********************  */
+
+.designer-name:hover {
+  font-weight: $weight-hover;
+  @include hover;
+  transform: scale(103%);
+}
+
+.design-name:hover {
+  font-weight: $weight-hover;
+  @include hover;
+  transform: scale(103%);
+}
+
+.zen-resources a:hover,
+.design-archives a:hover {
+  font-weight: $weight-hover;
+  @include hover;
+  transform: scale(103%);
+}
+
+/* Aside: Active ********************* */
+
+.designer-name:active {
+  color: $main-light-color;
+}
+
+.design-name:active {
+  color: $main-dark-color;
+}
+
+.zen-resources a:active,
+.design-archives a:active {
+  color: $main-dark-color;
 }
 
 .design-selection,
@@ -384,6 +425,7 @@ abbr[title] {
   padding-left: 25px;
   padding-right: 25px;
   text-align: center;
+  font-weight: $weight-regular;
 }
 .design-selection {
   padding-top: 50px;
@@ -393,12 +435,21 @@ abbr[title] {
   padding-bottom: 20px;
 }
 
-.zen-resources ul li a,
-.design-archives ul li a {
-  padding: 5px;
-  color: rgb(245, 241, 226);
-  display: list-item;
-  list-style-type: " ★ ";
-  text-align: center;
-  font-weight: $weight-regular;
+/* medium view***************************************/
+
+@media only screen and (min-width: 700px) {
+}
+
+/* large view************************************/
+
+@media only screen and (min-width: 900px) {
+  /*LARGE view aside bar*************************************/
+
+  .design-selection,
+  .design-archives,
+  .zen-resources {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: left;
+  }
 }

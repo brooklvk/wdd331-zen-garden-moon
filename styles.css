@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200,300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200,300;400;600&display=swap");
 /*RGB Code for Colors In case we need it
   Cream: rgb(245, 241,226)
   Deep Blue: rgb(5, 5, 31)
@@ -9,16 +9,12 @@
 */
 /* General Styles*/
 /* Reset margin, padding, and box model. */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -45,13 +41,13 @@ h3 {
 p,
 ul {
   line-height: 1.5;
-  letter-spacing: 0.03rem;
   margin-bottom: 1.5rem;
 }
 
 p {
   color: #f5f1e2;
   margin-bottom: 1rem;
+  letter-spacing: 0.03rem;
 }
 
 /* Small Version: Header Area Layout */
@@ -164,6 +160,8 @@ p {
 
 .main p a:hover {
   color: #7b9ea3;
+  font-weight: 400;
+  transition: all 0.15s ease-in;
 }
 
 .main p a:active {
@@ -246,19 +244,12 @@ footer a:active {
 }
 
 /* Small Version: Aside layout*/
-aside {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-}
-
-aside a {
-  color: #f5f1e2;
-  font-weight: 400;
+ul {
+  list-style: none;
 }
 
 a,
-abbr[title] {
+h2 abbr {
   text-decoration: none;
 }
 
@@ -267,41 +258,80 @@ abbr[title] {
   padding: 12px;
   background: linear-gradient(to left, #5a868c 5%, #7b9ea3, #5a868c 95%);
   border-radius: 10px;
-  text-align: center;
-  max-width: fit-content;
-  /*position: absolute; left: 50%; margin-left: -50px;  margin-top: -50px;*/
+  max-width: max-content;
   margin: 0 auto;
   border: 6px solid #d96a16;
 }
 
 .sidebar h3 {
   color: rgb(245, 241, 226);
-  padding-top: 10px;
+  margin-top: 10px;
   padding-bottom: 10px;
   text-align: center;
   font-size: 1.5rem;
-  /*background:linear-gradient(rgb(245, 241,226), rgb(123, 158, 163))*/
-  /*background-clip:text;
-  background: linear-gradient(to bottom, rgb(217,106,22) 0%, rgb(5, 5, 31) 100%);*/
   background: linear-gradient(to left, rgb(5, 5, 31) 0%, rgb(217, 106, 22) 100%);
   background-position: 0 100%;
   background-size: 100% 6px;
   background-repeat: repeat-x;
 }
 
-.design-selection,
-.designer-name {
-  color: rgb(5, 5, 31);
-  text-align: center;
+/* Aside: Link & Visited ******************* */
+.designer-name:link,
+.designer-name:visited {
+  color: #05051f;
 }
 
-.design-selection .design-name {
-  color: rgb(245, 241, 226);
-  padding: 10px;
+.design-name:link,
+.design-name:visited {
+  color: #f5f1e2;
+  margin: 12px 0 -2px 0;
+  padding: 0;
   display: list-item;
   list-style-type: " ★ ";
-  text-align: center;
-  font-weight: 400;
+}
+
+.zen-resources a:link,
+.zen-resources a:visited,
+.design-archives a:link,
+.design-archives a:visited {
+  padding: 5px 0;
+  color: #f5f1e2;
+  display: list-item;
+  list-style-type: " ★ ";
+}
+
+/* Aside: Hover ***********************  */
+.designer-name:hover {
+  font-weight: 600;
+  transition: all 0.15s ease-in;
+  transform: scale(103%);
+}
+
+.design-name:hover {
+  font-weight: 600;
+  transition: all 0.15s ease-in;
+  transform: scale(103%);
+}
+
+.zen-resources a:hover,
+.design-archives a:hover {
+  font-weight: 600;
+  transition: all 0.15s ease-in;
+  transform: scale(103%);
+}
+
+/* Aside: Active ********************* */
+.designer-name:active {
+  color: #f5f1e2;
+}
+
+.design-name:active {
+  color: #05051f;
+}
+
+.zen-resources a:active,
+.design-archives a:active {
+  color: #05051f;
 }
 
 .design-selection,
@@ -310,6 +340,7 @@ abbr[title] {
   padding-left: 25px;
   padding-right: 25px;
   text-align: center;
+  font-weight: 400;
 }
 
 .design-selection {
@@ -320,14 +351,17 @@ abbr[title] {
   padding-bottom: 20px;
 }
 
-.zen-resources ul li a,
-.design-archives ul li a {
-  padding: 5px;
-  color: rgb(245, 241, 226);
-  display: list-item;
-  list-style-type: " ★ ";
-  text-align: center;
-  font-weight: 400;
+/* medium view***************************************/
+/* large view************************************/
+@media only screen and (min-width: 900px) {
+  /*LARGE view aside bar*************************************/
+  .design-selection,
+  .design-archives,
+  .zen-resources {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
