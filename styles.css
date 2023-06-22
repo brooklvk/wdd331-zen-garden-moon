@@ -144,7 +144,7 @@ p {
   margin: 0 auto 4rem auto;
 }
 
-/* Main Link Styles*/
+/* Small Version: Main Link Styles*/
 .main h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -179,7 +179,7 @@ p {
   font-weight: 200;
 }
 
-/*Small Version Footer Layout: Move Footer to the Bottom*/
+/*Small Version: Footer Layout- Move Footer to the Bottom*/
 .zen-validate-html::before {
   content: url(phases-of-the-moon-1.svg);
   display: block;
