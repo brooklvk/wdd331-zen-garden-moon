@@ -38,6 +38,10 @@ $h2-sm-v: 1.5rem;
 $h3-sm-v: 1.5rem;
 $moon-icons-sm: 74px;
 
+// Mediun View Varibles
+
+$moon-icons-md: 100px;
+
 // Large View Variables
 $intro-text-lg-v: 2rem;
 $body-copy-lg-v: 1.5rem;
@@ -177,7 +181,7 @@ p {
   height: 161px;
   border-radius: 50%;
   background: $main-light-color;
-  box-shadow: 0 0 100px $accent-color-light;
+  box-shadow: 0 0 125px rgba(245, 241, 226, 0.9);
   padding: $space-md;
   display: flex;
   justify-content: center;
@@ -433,15 +437,43 @@ h2 abbr {
 /* medium view***************************************/
 
 @media only screen and (min-width: 700px) {
+  .page-wrapper {
+    max-width: 60ch;
+    margin: $space-xxlg auto $space-xxxlg auto;
+  }
+
+  .zen-validate-html::before,
+  .zen-validate-css::before,
+  .zen-license::before,
+  .zen-accessibility::before,
+  .zen-github::before {
+    width: $moon-icons-md;
+  }
+
+  footer a:link {
+    font-size: $footer-text-lg-v;
+  }
 }
 
 /* large view************************************/
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1200px) {
   /*LARGE view aside bar*************************************/
+
+  html {
+    width: 85%;
+    margin: 0 auto;
+  }
 
   body {
     font-size: $body-copy-lg-v;
+  }
+
+  .page-wrapper {
+    max-width: 70ch;
+    margin: $space-xxlg auto $space-xxxlg auto;
+    @include grid(auto 1fr);
+    grid-row: 1fr 1fr 1fr;
   }
 
   .design-selection,
@@ -452,36 +484,21 @@ h2 abbr {
     text-align: left;
   }
 
+  footer {
+    margin: 0 auto;
+    grid-template-columns: repeat(5, 20%);
+  }
+
   footer a:link {
     font-size: $footer-text-lg-v;
   }
 
-  .zen-validate-html::before {
-    width: $moon-icons-lg;
-  }
-
-  .zen-validate-css::before {
-    width: $moon-icons-lg;
-  }
-
-  .zen-license::before {
-    width: $moon-icons-lg;
-  }
-
-  .zen-accessibility::before {
-    width: $moon-icons-lg;
-  }
-
+  .zen-validate-html::before,
+  .zen-validate-css::before,
+  .zen-license::before,
+  .zen-accessibility::before,
   .zen-github::before {
     width: $moon-icons-lg;
-  }
-
-  .page-wrapper {
-    max-width: 80%;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-row: 1fr 1fr 1fr;
-    // column-gap: 5%;
   }
 
   .intro {
