@@ -25,6 +25,9 @@ body {
   background-color: #05051f;
   font-family: "League Spartan", sans-serif;
   font-size: 1.25rem;
+}
+
+.page-wrapper {
   margin: 6rem 10% 14rem 10%;
 }
 
@@ -50,11 +53,10 @@ p {
   letter-spacing: 0.03rem;
 }
 
-/* Small Version: Header Area Layout */
+/* Small Version: Header Area Layout ************ */
 .intro {
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
 }
 
 .intro h1 {
@@ -66,7 +68,7 @@ p {
 }
 
 .intro h2 {
-  background: linear-gradient(to right, rgb(217, 106, 22) 0%, rgb(5, 5, 31) 100%);
+  background: linear-gradient(to right, #d96a16 0%, #05051f 100%);
   background-position: 0 100%;
   background-size: 100% 9px;
   background-repeat: repeat-x;
@@ -77,7 +79,7 @@ p {
 }
 
 .intro h3 {
-  background: linear-gradient(to left, rgb(5, 5, 31) 0%, rgb(217, 106, 22) 100%);
+  background: linear-gradient(to left, #05051f 0%, #d96a16 100%);
   background-position: 5% 100%;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -120,7 +122,7 @@ p {
 .summary p a:link,
 .summary p a:visited {
   color: #d96a16;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .summary p a:hover {
@@ -131,16 +133,15 @@ p {
   color: #5a868c;
 }
 
-.preamble {
-  font-size: 1.25rem;
+.preamble p {
+  font-weight: 200;
 }
 
-/* Small Version: Main Center */
+/* Small Version: Main */
 .main {
   margin: 0 auto 4rem auto;
 }
 
-/* Small Version: Main Link Styles */
 .main h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -152,6 +153,10 @@ p {
   color: #5a868c;
 }
 
+.main p {
+  font-weight: 200;
+}
+
 .main p a:link,
 .main p a:visited {
   color: #d96a16;
@@ -160,8 +165,6 @@ p {
 
 .main p a:hover {
   color: #7b9ea3;
-  font-weight: 400;
-  transition: all 0.15s ease-in;
 }
 
 .main p a:active {
@@ -174,7 +177,6 @@ p {
 .benefits,
 .requirements {
   margin: 0 0 4rem 0;
-  font-weight: 200;
 }
 
 /*Small Version: Footer Layout- Move Footer to the Bottom*/
@@ -302,22 +304,22 @@ h2 abbr {
 
 /* Aside: Hover ***********************  */
 .designer-name:hover {
-  font-weight: 600;
   transition: all 0.15s ease-in;
-  transform: scale(103%);
+  font-weight: 600;
+  transform: scale(102%);
 }
 
 .design-name:hover {
-  font-weight: 600;
   transition: all 0.15s ease-in;
-  transform: scale(103%);
+  font-weight: 600;
+  transform: scale(102%);
 }
 
 .zen-resources a:hover,
 .design-archives a:hover {
-  font-weight: 600;
   transition: all 0.15s ease-in;
-  transform: scale(103%);
+  font-weight: 600;
+  transform: scale(102%);
 }
 
 /* Aside: Active ********************* */
@@ -355,12 +357,72 @@ h2 abbr {
 /* large view************************************/
 @media only screen and (min-width: 900px) {
   /*LARGE view aside bar*************************************/
+  body {
+    font-size: 1.5rem;
+  }
   .design-selection,
   .design-archives,
   .zen-resources {
     padding-left: 25px;
     padding-right: 25px;
     text-align: left;
+  }
+  footer a:link {
+    font-size: 1.25rem;
+  }
+  .zen-validate-html::before {
+    width: 125px;
+  }
+  .zen-validate-css::before {
+    width: 125px;
+  }
+  .zen-license::before {
+    width: 125px;
+  }
+  .zen-accessibility::before {
+    width: 125px;
+  }
+  .zen-github::before {
+    width: 125px;
+  }
+  .page-wrapper {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-row: 1fr 1fr 1fr;
+  }
+  .intro {
+    grid-column: 1/-1;
+  }
+  .intro h1 {
+    font-size: 3.5rem;
+  }
+  .intro h2 {
+    font-size: 2rem;
+  }
+  .preamble p {
+    font-size: 1.5rem;
+  }
+  .summary p {
+    font-size: 2rem;
+  }
+  .summary p:nth-child(2) {
+    font-size: 1.5rem;
+  }
+  .main {
+    font-size: 1.5rem;
+    grid-column: 2/-1;
+    grid-row: 2/4;
+  }
+  .main h3,
+  .intro h3 {
+    font-size: 1.75rem;
+  }
+  .sidebar {
+    transform: translateX(-22.5%);
+    min-width: max-content;
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
 }
 

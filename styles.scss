@@ -36,6 +36,16 @@ $footer-text: 1rem;
 $h1-sm-v: 2.25rem;
 $h2-sm-v: 1.5rem;
 $h3-sm-v: 1.5rem;
+$moon-icons-sm: 74px;
+
+// Large View Variables
+$intro-text-lg-v: 2rem;
+$body-copy-lg-v: 1.5rem;
+$footer-text-lg-v: 1.25rem;
+$h1-lg-v: 3.5rem;
+$h2-lg-v: 2rem;
+$h3-lg-v: 1.75rem;
+$moon-icons-lg: 125px;
 
 // mixins
 @mixin grid($col...) {
@@ -43,8 +53,10 @@ $h3-sm-v: 1.5rem;
   grid-template-columns: $col;
 }
 
-@mixin hover() {
+@mixin aside-hover() {
   transition: all 0.15s ease-in;
+  font-weight: $weight-hover;
+  transform: scale(102%);
 }
 
 /* General Styles*/
@@ -66,6 +78,9 @@ body {
   background-color: $main-dark-color;
   font-family: $body-font;
   font-size: $body-copy-sm-v;
+}
+
+.page-wrapper {
   margin: $space-xxlg 10% $space-xxxlg 10%;
 }
 
@@ -91,12 +106,11 @@ p {
   letter-spacing: 0.03rem;
 }
 
-/* Small Version: Header Area Layout */
+/* Small Version: Header Area Layout ************ */
 
 .intro {
   display: flex;
   flex-direction: column;
-  font-size: $intro-text-sm-v;
 }
 
 .intro h1 {
@@ -109,17 +123,13 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
-  // writing-mode: vertical-rl;
-  // text-orientation: upright;
-  // text-transform: uppercase;
-  // word-spacing: -1.25rem;
 }
 
 .intro h2 {
   background: linear-gradient(
     to right,
-    rgb(217, 106, 22) 0%,
-    rgb(5, 5, 31) 100%
+    $accent-color-bright 0%,
+    $main-dark-color 100%
   );
   background-position: 0 100%;
   background-size: 100% 9px;
@@ -133,8 +143,8 @@ p {
 .intro h3 {
   background: linear-gradient(
     to left,
-    rgb(5, 5, 31) 0%,
-    rgb(217, 106, 22) 100%
+    $main-dark-color 0%,
+    $accent-color-bright 100%
   );
   background-position: 5% 100%;
   background-size: 100% 6px;
@@ -178,7 +188,7 @@ p {
 .summary p a:link,
 .summary p a:visited {
   color: $accent-color-bright;
-  font-weight: $weight-light;
+  font-weight: $weight-regular;
 }
 
 .summary p a:hover {
@@ -189,25 +199,15 @@ p {
   color: $accent-color-medium;
 }
 
-.preamble {
-  // background: linear-gradient(
-  //   to right,
-  //   rgb(217, 106, 22) 0%,
-  //   rgb(5, 5, 31) 100%
-  // );
-  // background-position: 0 100%;
-  // background-size: 100% 6px;
-  // background-repeat: repeat-x;
-  font-size: $body-copy-sm-v;
+.preamble p {
+  font-weight: $weight-xlight;
 }
 
-/* Small Version: Main Center */
+/* Small Version: Main */
 
 .main {
   margin: 0 auto $space-xlg auto;
 }
-
-/* Small Version: Main Link Styles */
 
 .main h3 {
   font-size: $h3-sm-v;
@@ -224,6 +224,10 @@ p {
   color: $accent-color-medium;
 }
 
+.main p {
+  font-weight: $weight-xlight;
+}
+
 .main p a:link,
 .main p a:visited {
   color: $accent-color-bright;
@@ -232,8 +236,6 @@ p {
 
 .main p a:hover {
   color: $accent-color-light;
-  font-weight: $weight-regular;
-  @include hover;
 }
 
 .main p a:active {
@@ -245,7 +247,6 @@ p {
 .benefits,
 .requirements {
   margin: 0 0 $space-xlg 0;
-  font-weight: $weight-xlight;
 }
 
 /*Small Version: Footer Layout- Move Footer to the Bottom*/
@@ -253,31 +254,31 @@ p {
 .zen-validate-html::before {
   content: url(phases-of-the-moon-1.svg);
   display: block;
-  width: 74px;
+  width: $moon-icons-sm;
 }
 
 .zen-validate-css::before {
   content: url(phases-of-the-moon-2.svg);
   display: block;
-  width: 74px;
+  width: $moon-icons-sm;
 }
 
 .zen-license::before {
   content: url(phases-of-the-moon-3.svg);
   display: block;
-  width: 74px;
+  width: $moon-icons-sm;
 }
 
 .zen-accessibility::before {
   content: url(phases-of-the-moon-4.svg);
   display: block;
-  width: 74px;
+  width: $moon-icons-sm;
 }
 
 .zen-github::before {
   content: url(phases-of-the-moon-5.svg);
   display: block;
-  width: 74px;
+  width: $moon-icons-sm;
 }
 
 footer {
@@ -299,7 +300,7 @@ footer a:visited {
   color: $accent-color-medium;
   font-family: $heading-font;
   font-weight: $weight-bold;
-  font-size: 1rem;
+  font-size: $footer-text;
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
@@ -386,22 +387,16 @@ h2 abbr {
 /* Aside: Hover ***********************  */
 
 .designer-name:hover {
-  font-weight: $weight-hover;
-  @include hover;
-  transform: scale(103%);
+  @include aside-hover();
 }
 
 .design-name:hover {
-  font-weight: $weight-hover;
-  @include hover;
-  transform: scale(103%);
+  @include aside-hover();
 }
 
 .zen-resources a:hover,
 .design-archives a:hover {
-  font-weight: $weight-hover;
-  @include hover;
-  transform: scale(103%);
+  @include aside-hover();
 }
 
 /* Aside: Active ********************* */
@@ -445,11 +440,89 @@ h2 abbr {
 @media only screen and (min-width: 900px) {
   /*LARGE view aside bar*************************************/
 
+  body {
+    font-size: $body-copy-lg-v;
+  }
+
   .design-selection,
   .design-archives,
   .zen-resources {
     padding-left: 25px;
     padding-right: 25px;
     text-align: left;
+  }
+
+  footer a:link {
+    font-size: $footer-text-lg-v;
+  }
+
+  .zen-validate-html::before {
+    width: $moon-icons-lg;
+  }
+
+  .zen-validate-css::before {
+    width: $moon-icons-lg;
+  }
+
+  .zen-license::before {
+    width: $moon-icons-lg;
+  }
+
+  .zen-accessibility::before {
+    width: $moon-icons-lg;
+  }
+
+  .zen-github::before {
+    width: $moon-icons-lg;
+  }
+
+  .page-wrapper {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-row: 1fr 1fr 1fr;
+    // column-gap: 5%;
+  }
+
+  .intro {
+    grid-column: 1/-1;
+  }
+
+  .intro h1 {
+    font-size: $h1-lg-v;
+  }
+
+  .intro h2 {
+    font-size: $h2-lg-v;
+  }
+
+  .preamble p {
+    font-size: $body-copy-lg-v;
+  }
+
+  .summary p {
+    font-size: $intro-text-lg-v;
+  }
+
+  .summary p:nth-child(2) {
+    font-size: $body-copy-lg-v;
+  }
+
+  .main {
+    font-size: $body-copy-lg-v;
+    grid-column: 2/-1;
+    grid-row: 2/4;
+  }
+
+  .main h3,
+  .intro h3 {
+    font-size: $h3-lg-v;
+  }
+
+  .sidebar {
+    transform: translateX(-22.5%);
+    min-width: max-content;
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
 }
