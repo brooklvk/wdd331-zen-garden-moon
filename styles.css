@@ -80,9 +80,9 @@ p {
 
 .intro h3 {
   background: linear-gradient(to left, #05051f 0%, #d96a16 100%);
-  background-position: 5% 100%;
+  background-position: 0 100%;
   background-size: 100% 6px;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   padding-bottom: 1rem;
   color: #5a868c;
   font-size: 1.5rem;
@@ -356,7 +356,7 @@ h2 abbr {
 /* medium view***************************************/
 @media only screen and (min-width: 700px) {
   .page-wrapper {
-    max-width: 60ch;
+    max-width: 80%;
     margin: 6rem auto 14rem auto;
   }
   .zen-validate-html::before,
@@ -368,6 +368,28 @@ h2 abbr {
   }
   footer a:link {
     font-size: 1.25rem;
+  }
+  .intro h1 {
+    font-size: 3.5rem;
+  }
+  .intro h2 {
+    font-size: 2rem;
+  }
+  .preamble p {
+    font-size: 1.5rem;
+  }
+  .summary p {
+    font-size: 2rem;
+  }
+  .summary p:nth-child(2) {
+    font-size: 1.5rem;
+  }
+  .main {
+    font-size: 1.5rem;
+  }
+  .main h3,
+  .intro h3 {
+    font-size: 1.75rem;
   }
 }
 /* large view************************************/
@@ -398,9 +420,6 @@ h2 abbr {
     margin: 0 auto;
     grid-template-columns: repeat(5, 20%);
   }
-  footer a:link {
-    font-size: 1.25rem;
-  }
   .zen-validate-html::before,
   .zen-validate-css::before,
   .zen-license::before,
@@ -411,29 +430,10 @@ h2 abbr {
   .intro {
     grid-column: 1/-1;
   }
-  .intro h1 {
-    font-size: 3.5rem;
-  }
-  .intro h2 {
-    font-size: 2rem;
-  }
-  .preamble p {
-    font-size: 1.5rem;
-  }
-  .summary p {
-    font-size: 2rem;
-  }
-  .summary p:nth-child(2) {
-    font-size: 1.5rem;
-  }
   .main {
     font-size: 1.5rem;
     grid-column: 2/-1;
     grid-row: 2/4;
-  }
-  .main h3,
-  .intro h3 {
-    font-size: 1.75rem;
   }
   .sidebar {
     transform: translateX(-22.5%);
