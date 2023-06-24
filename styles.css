@@ -393,7 +393,7 @@ h2 abbr {
   }
 }
 /* large view************************************/
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1100px) {
   /*LARGE view aside bar*************************************/
   html {
     width: 85%;
