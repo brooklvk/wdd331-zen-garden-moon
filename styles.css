@@ -354,7 +354,7 @@ h2 abbr {
 }
 
 /* medium view***************************************/
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
   .page-wrapper {
     max-width: 80%;
     margin: 6rem auto 14rem auto;
@@ -390,6 +390,21 @@ h2 abbr {
   .main h3,
   .intro h3 {
     font-size: 1.75rem;
+  }
+  /* Medium view header / moon */
+  .intro {
+    position: relative;
+  }
+  .summary::before {
+    content: url(moon-med.png);
+    width: 360px;
+    height: 360px;
+    position: absolute;
+    top: 0;
+    right: -20px;
+  }
+  header, .summary p:first-of-type {
+    width: 400px;
   }
 }
 /* large view************************************/
@@ -440,6 +455,18 @@ h2 abbr {
     min-width: max-content;
     grid-column: 1/2;
     grid-row: 2/3;
+  }
+  /* Large view header / moon ******* */
+  .summary::before {
+    content: url(moon-lg.png);
+    width: 580px;
+    height: 580px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+  }
+  header, .summary p:first-of-type {
+    width: 300px;
   }
 }
 
