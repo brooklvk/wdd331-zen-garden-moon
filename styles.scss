@@ -486,6 +486,10 @@ h2 abbr {
     position: relative;
   }
 
+  .summary {
+    margin-top: $space-xlg;
+  }
+
   .summary::before {
     content: url(moon-med.png);
     width: 360px;

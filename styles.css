@@ -395,6 +395,9 @@ h2 abbr {
   .intro {
     position: relative;
   }
+  .summary {
+    margin-top: 4rem;
+  }
   .summary::before {
     content: url(moon-med.png);
     width: 360px;
