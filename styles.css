@@ -141,7 +141,6 @@ p {
 .main {
   margin: 0 auto 4rem auto;
 }
-
 .main h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -152,21 +151,16 @@ p {
   padding-bottom: 1rem;
   color: #5a868c;
 }
-
 .main p {
   font-weight: 200;
 }
-
-.main p a:link,
-.main p a:visited {
+.main p a:link, .main p a:visited {
   color: #d96a16;
   font-weight: 300;
 }
-
 .main p a:hover {
   color: #7b9ea3;
 }
-
 .main p a:active {
   color: #5a868c;
 }
@@ -223,9 +217,7 @@ footer {
   left: 0;
   padding: 0 0 4rem 0;
 }
-
-footer a:link,
-footer a:visited {
+footer a:link, footer a:visited {
   color: #5a868c;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
@@ -234,13 +226,11 @@ footer a:visited {
   text-decoration: none;
   transition: all 0.25s ease-in-out;
 }
-
 footer a:hover {
   color: #d96a16;
   transform: scale(125%);
   transition: all 0.25s ease-in-out;
 }
-
 footer a:active {
   color: #f5f1e2;
 }
@@ -406,7 +396,8 @@ h2 abbr {
     top: 0;
     right: -20px;
   }
-  header, .summary p:first-of-type {
+  header,
+  .summary p:first-of-type {
     width: 400px;
   }
 }
@@ -467,9 +458,11 @@ h2 abbr {
     position: absolute;
     top: -1px;
     right: -1px;
+    transform: translateX(10.5%);
   }
-  header, .summary p:first-of-type {
-    width: 300px;
+  header,
+  .summary p:first-of-type {
+    width: 350px;
   }
 }
 

@@ -215,33 +215,34 @@ p {
 
 .main {
   margin: 0 auto $space-xlg auto;
+
+  & h3 {
+    font-size: $h3-sm-v;
+    margin-bottom: $space-mdlg;
+    @include h3-gradient();
+    padding-bottom: $space-md;
+    color: $accent-color-medium;
+  }
+
+  & p {
+    font-weight: $weight-xlight;
+
+    & a:link,
+    & a:visited {
+      color: $accent-color-bright;
+      font-weight: $weight-light;
+    }
+
+    & a:hover {
+      color: $accent-color-light;
+    }
+
+    & a:active {
+      color: #5a868c;
+    }
+  }
 }
 
-.main h3 {
-  font-size: $h3-sm-v;
-  margin-bottom: $space-mdlg;
-  @include h3-gradient();
-  padding-bottom: $space-md;
-  color: $accent-color-medium;
-}
-
-.main p {
-  font-weight: $weight-xlight;
-}
-
-.main p a:link,
-.main p a:visited {
-  color: $accent-color-bright;
-  font-weight: $weight-light;
-}
-
-.main p a:hover {
-  color: $accent-color-light;
-}
-
-.main p a:active {
-  color: #5a868c;
-}
 .preamble,
 .explanation,
 .participation,
@@ -294,27 +295,27 @@ footer {
   bottom: 0;
   left: 0;
   padding: 0 0 4rem 0;
-}
 
-footer a:link,
-footer a:visited {
-  color: $accent-color-medium;
-  font-family: $heading-font;
-  font-weight: $weight-bold;
-  font-size: $footer-text;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.25s ease-in-out;
-}
+  & a:link,
+  & a:visited {
+    color: $accent-color-medium;
+    font-family: $heading-font;
+    font-weight: $weight-bold;
+    font-size: $footer-text;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+  }
 
-footer a:hover {
-  color: $accent-color-bright;
-  transform: scale(125%);
-  transition: all 0.25s ease-in-out;
-}
+  & a:hover {
+    color: $accent-color-bright;
+    transform: scale(125%);
+    transition: all 0.25s ease-in-out;
+  }
 
-footer a:active {
-  color: $main-light-color;
+  & a:active {
+    color: $main-light-color;
+  }
 }
 
 /* Small Version: Aside layout*/
@@ -499,7 +500,8 @@ h2 abbr {
     right: -20px;
   }
 
-  header, .summary p:first-of-type {
+  header,
+  .summary p:first-of-type {
     width: 400px;
   }
 }
@@ -572,9 +574,11 @@ h2 abbr {
     position: absolute;
     top: -1px;
     right: -1px;
+    transform: translateX(10.5%);
   }
 
-  header, .summary p:first-of-type {
-    width: 300px;
+  header,
+  .summary p:first-of-type {
+    width: 350px;
   }
 }
