@@ -46,6 +46,7 @@ $moon-icons-md: 100px;
 // Large View Variables
 $intro-text-lg-v: 2rem;
 $body-copy-lg-v: 1.5rem;
+$body-copy-aside: 1.34rem;
 $footer-text-lg-v: 1.25rem;
 $h1-lg-v: 3.5rem;
 $h2-lg-v: 2rem;
@@ -509,7 +510,7 @@ h2 abbr {
   }
 
   body {
-    font-size: $body-copy-lg-v;
+    font-size: $body-copy-aside;
   }
 
   .page-wrapper {
