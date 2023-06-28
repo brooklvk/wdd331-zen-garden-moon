@@ -20,6 +20,7 @@ $space-lg: 2rem;
 $space-xlg: 4rem;
 $space-xxlg: 6rem;
 $space-xxxlg: 14rem;
+$space-4xlg: 18rem;
 $weight-xlight: 200;
 $weight-light: 300;
 $weight-regular: 400;
@@ -289,7 +290,6 @@ footer {
   justify-items: center;
   align-items: center;
   justify-content: center;
-  align-self: end;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -318,7 +318,7 @@ footer {
   }
 }
 
-/* Small Version: Aside layout*/
+/* Small Version: Aside */
 
 ul {
   list-style: none;
@@ -328,8 +328,6 @@ a,
 h2 abbr {
   text-decoration: none;
 }
-
-/* blue/green side bar with stars*********************************/
 
 .sidebar {
   padding: 12px;
@@ -432,12 +430,12 @@ h2 abbr {
   padding-bottom: 20px;
 }
 
-/* medium view***************************************/
+/* MEDIUM VIEW ***************************************/
 
 @media only screen and (min-width: 900px) {
   .page-wrapper {
     max-width: 80%;
-    margin: $space-xxlg auto $space-xxxlg auto;
+    margin: $space-xxlg auto $space-4xlg auto;
   }
 
   .zen-validate-html::before,
@@ -460,20 +458,14 @@ h2 abbr {
     font-size: $h2-lg-v;
   }
 
-  .preamble p {
+  .preamble p,
+  .summary p:nth-child(2),
+  .main {
     font-size: $body-copy-lg-v;
   }
 
   .summary p {
     font-size: $intro-text-lg-v;
-  }
-
-  .summary p:nth-child(2) {
-    font-size: $body-copy-lg-v;
-  }
-
-  .main {
-    font-size: $body-copy-lg-v;
   }
 
   .main h3,
@@ -506,10 +498,10 @@ h2 abbr {
   }
 }
 
-/* large view************************************/
+/* LARGE VIEW ************************************/
 
 @media only screen and (min-width: 1100px) {
-  /*LARGE view aside bar*************************************/
+  /* PAGE LAYOUT *************************************/
 
   html {
     width: 85%;
@@ -527,16 +519,7 @@ h2 abbr {
     grid-row: 1fr 1fr 1fr;
   }
 
-  .design-selection,
-  .design-archives,
-  .zen-resources {
-    padding-left: 25px;
-    padding-right: 25px;
-    text-align: left;
-  }
-
   footer {
-    margin: 0 auto;
     grid-template-columns: repeat(5, 20%);
   }
 
@@ -565,6 +548,13 @@ h2 abbr {
     grid-row: 2/3;
   }
 
+  .design-selection,
+  .design-archives,
+  .zen-resources {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: left;
+  }
   /* Large view header / moon ******* */
 
   .summary::before {
