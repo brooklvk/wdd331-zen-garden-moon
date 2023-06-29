@@ -230,7 +230,7 @@ footer a:link, footer a:visited {
 }
 footer a:hover {
   color: #d96a16;
-  transform: scale(125%);
+  transform: scale(1.25);
   transition: all 0.25s ease-in-out;
 }
 footer a:active {
@@ -297,20 +297,20 @@ h2 abbr {
 .designer-name:hover {
   transition: all 0.15s ease-in;
   font-weight: 600;
-  transform: scale(102%);
+  transform: scale(1.02);
 }
 
 .design-name:hover {
   transition: all 0.15s ease-in;
   font-weight: 600;
-  transform: scale(102%);
+  transform: scale(1.02);
 }
 
 .zen-resources a:hover,
 .design-archives a:hover {
   transition: all 0.15s ease-in;
   font-weight: 600;
-  transform: scale(102%);
+  transform: scale(1.02);
 }
 
 /* Aside: Active ********************* */
