@@ -142,85 +142,85 @@ p {
 .intro {
   display: flex;
   flex-direction: column;
-}
 
-.intro h1 {
-  font-size: var(--h1);
-  // color: $accent-color-bright;
-  background: -webkit-linear-gradient(
-    $accent-color-bright 5%,
-    $accent-color-medium 85%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1;
-}
+  & h1 {
+    font-size: var(--h1);
+    // color: $accent-color-bright;
+    background: -webkit-linear-gradient(
+      $accent-color-bright 5%,
+      $accent-color-medium 85%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+  }
 
-.intro h2 {
-  background: linear-gradient(
-    to right,
-    $accent-color-bright 0%,
-    $main-dark-color 100%
-  );
-  background-position: 0 100%;
-  background-size: 100% 9px;
-  background-repeat: repeat-x;
-  padding-bottom: $space-mdlg;
-  font-size: var(--h2);
-  color: $accent-color-medium;
-  font-weight: $weight-light;
-}
+  & h2 {
+    background: linear-gradient(
+      to right,
+      $accent-color-bright 0%,
+      $main-dark-color 100%
+    );
+    background-position: 0 100%;
+    background-size: 100% 9px;
+    background-repeat: repeat-x;
+    padding-bottom: $space-mdlg;
+    font-size: var(--h2);
+    color: $accent-color-medium;
+    font-weight: $weight-light;
+  }
 
-.intro h3 {
-  @include h3-gradient();
-  padding-bottom: $space-md;
-  color: $accent-color-medium;
-  font-size: var(--h3);
-  margin-bottom: $space-mdlg;
+  & h3 {
+    @include h3-gradient();
+    padding-bottom: $space-md;
+    color: $accent-color-medium;
+    font-size: var(--h3);
+    margin-bottom: $space-mdlg;
+  }
 }
 
 .summary {
   margin-bottom: $space-lg;
-}
 
-.summary p {
-  color: $accent-color-light;
-  margin-bottom: $space-lg;
-  font-size: var(--summary);
-  font-weight: $weight-xlight;
-}
+  & p {
+    color: $accent-color-light;
+    margin-bottom: $space-lg;
+    font-size: var(--summary);
+    font-weight: $weight-xlight;
+  }
 
-.summary p:nth-child(2) {
-  font-size: var(--body-copy);
-  font-style: italic;
-}
+  & p:nth-child(2) {
+    font-size: var(--body-copy);
+    font-style: italic;
+  }
 
-.summary::before {
-  content: url(moon-sm.png);
-  width: 161px;
-  height: 161px;
-  border-radius: 50%;
-  background: $main-light-color;
-  box-shadow: 0 0 125px rgba(245, 241, 226, 0.9);
-  padding: $space-md;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: $space-xlg auto;
-}
+  &::before {
+    content: url(moon-sm.png);
+    width: 161px;
+    height: 161px;
+    border-radius: 50%;
+    background: $main-light-color;
+    box-shadow: 0 0 125px rgba(245, 241, 226, 0.9);
+    padding: $space-md;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: $space-xlg auto;
+  }
 
-.summary p a:link,
-.summary p a:visited {
-  color: $accent-color-bright;
-  font-weight: $weight-regular;
-}
+  & p a:link,
+  & p a:visited {
+    color: $accent-color-bright;
+    font-weight: $weight-regular;
+  }
 
-.summary p a:hover {
-  color: $main-light-color;
-}
+  & p a:hover {
+    color: $main-light-color;
+  }
 
-.summary p a:active {
-  color: $accent-color-medium;
+  & p a:active {
+    color: $accent-color-medium;
+  }
 }
 
 .preamble p {
@@ -359,21 +359,22 @@ h2 abbr {
   max-width: max-content;
   margin: 0 auto;
   border: 6px solid $accent-color-bright;
-}
-.sidebar h3 {
-  color: rgb(245, 241, 226);
-  margin-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  font-size: var(--h3);
-  background: linear-gradient(
-    to left,
-    rgb(5, 5, 31) 0%,
-    rgb(217, 106, 22) 100%
-  );
-  background-position: 0 100%;
-  background-size: 100% 6px;
-  background-repeat: repeat-x;
+
+  & h3 {
+    color: rgb(245, 241, 226);
+    margin-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: var(--h3);
+    background: linear-gradient(
+      to left,
+      rgb(5, 5, 31) 0%,
+      rgb(217, 106, 22) 100%
+    );
+    background-position: 0 100%;
+    background-size: 100% 6px;
+    background-repeat: repeat-x;
+  }
 }
 
 /* Aside: Link & Visited ******************* */

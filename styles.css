@@ -68,7 +68,6 @@ p {
   display: flex;
   flex-direction: column;
 }
-
 .intro h1 {
   font-size: var(--h1);
   background: -webkit-linear-gradient(#d96a16 5%, #5a868c 85%);
@@ -76,7 +75,6 @@ p {
   -webkit-text-fill-color: transparent;
   line-height: 1;
 }
-
 .intro h2 {
   background: linear-gradient(to right, #d96a16 0%, #05051f 100%);
   background-position: 0 100%;
@@ -87,7 +85,6 @@ p {
   color: #5a868c;
   font-weight: 300;
 }
-
 .intro h3 {
   background: linear-gradient(to left, #05051f 0%, #d96a16 100%);
   background-position: 0 100%;
@@ -102,19 +99,16 @@ p {
 .summary {
   margin-bottom: 2rem;
 }
-
 .summary p {
   color: #7b9ea3;
   margin-bottom: 2rem;
   font-size: var(--summary);
   font-weight: 200;
 }
-
 .summary p:nth-child(2) {
   font-size: var(--body-copy);
   font-style: italic;
 }
-
 .summary::before {
   content: url(moon-sm.png);
   width: 161px;
@@ -128,17 +122,13 @@ p {
   align-items: center;
   margin: 4rem auto;
 }
-
-.summary p a:link,
-.summary p a:visited {
+.summary p a:link, .summary p a:visited {
   color: #d96a16;
   font-weight: 400;
 }
-
 .summary p a:hover {
   color: #f5f1e2;
 }
-
 .summary p a:active {
   color: #5a868c;
 }
@@ -266,7 +256,6 @@ h2 abbr {
   margin: 0 auto;
   border: 6px solid #d96a16;
 }
-
 .sidebar h3 {
   color: rgb(245, 241, 226);
   margin-top: 10px;
