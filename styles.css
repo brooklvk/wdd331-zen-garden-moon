@@ -382,13 +382,22 @@ h2 abbr {
   .summary {
     margin-top: 4rem;
   }
+  @keyframes moon-medium {
+    0% {
+      transform: translate(110%, -150%);
+    }
+    100% {
+      transform: translate(110%, -90%);
+    }
+  }
   .summary::before {
     content: url(moon-med.png);
     width: 360px;
     height: 360px;
     position: absolute;
-    top: 0;
-    right: -20px;
+    transform: translate(110%, -90%);
+    animation-duration: 3s;
+    animation-name: moon-medium;
   }
   header,
   .summary p:first-of-type {
@@ -444,11 +453,21 @@ h2 abbr {
     text-align: left;
   }
   /* Large view header / moon ******* */
+  @keyframes moon-large {
+    0% {
+      transform: translate(60%, -150%);
+    }
+    100% {
+      transform: translate(60%, -70%);
+    }
+  }
   .summary::before {
     content: url(moon-lg.png);
     width: 580px;
     height: 580px;
-    transform: translate(3rem, -1.5rem);
+    transform: translate(60%, -70%);
+    animation-duration: 3s;
+    animation-name: moon-large;
   }
   header,
   .summary p:first-of-type {
