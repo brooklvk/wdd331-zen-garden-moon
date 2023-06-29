@@ -286,8 +286,7 @@ p {
 }
 
 footer {
-  display: grid;
-  grid-template-columns: repeat(5, 19%);
+  @include grid(19% 19% 19% 19% 19%);
   justify-items: center;
   align-items: center;
   justify-content: center;
@@ -502,8 +501,6 @@ h2 abbr {
 /* LARGE VIEW ************************************/
 
 @media only screen and (min-width: 1100px) {
-  /* PAGE LAYOUT *************************************/
-
   html {
     width: 85%;
     margin: 0 auto;
@@ -512,6 +509,16 @@ h2 abbr {
   body {
     font-size: $body-copy-aside;
   }
+
+  .zen-validate-html::before,
+  .zen-validate-css::before,
+  .zen-license::before,
+  .zen-accessibility::before,
+  .zen-github::before {
+    width: $moon-icons-lg;
+  }
+
+  /* LARGE VIEW: PAGE LAYOUT *************************************/
 
   .page-wrapper {
     max-width: 70ch;
@@ -522,14 +529,6 @@ h2 abbr {
 
   footer {
     grid-template-columns: repeat(5, 20%);
-  }
-
-  .zen-validate-html::before,
-  .zen-validate-css::before,
-  .zen-license::before,
-  .zen-accessibility::before,
-  .zen-github::before {
-    width: $moon-icons-lg;
   }
 
   .intro {
@@ -543,7 +542,7 @@ h2 abbr {
   }
 
   .sidebar {
-    transform: translateX(-3.5rem);
+    transform: translateX(-4rem);
     min-width: max-content;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -565,7 +564,7 @@ h2 abbr {
     // position: absolute;
     // top: -15px;
     // right: -1px;
-    transform: translate(2rem, -1.5rem);
+    transform: translate(3rem, -1.5rem);
   }
 
   header,
