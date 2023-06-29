@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200,300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200;300;400;600&display=swap");
 /*RGB Code for Colors In case we need it
   Cream: rgb(245, 241,226)
   Deep Blue: rgb(5, 5, 31)
@@ -9,6 +9,16 @@
 */
 /* General Styles*/
 /* Reset margin, padding, and box model. */
+:root {
+  --h1: clamp(2.25rem, calc(1.82rem + 2.44vw), 3.5rem);
+  --h2: clamp(1.5rem, calc(1.33rem + 0.98vw), 2rem);
+  --h3: clamp(1.25rem, calc(1.08rem + 0.98vw), 1.75rem);
+  --body-copy: clamp(1.25rem, calc(1.16rem + 0.49vw), 1.5rem);
+  --summary: clamp(1.5rem, calc(1.33rem + 0.98vw), 2rem);
+  --footer-text: clamp(1rem, calc(0.91rem + 0.49vw), 1.25rem);
+  --aside-links: clamp(1.13rem, calc(1rem + 0.73vw), 1.5rem);
+}
+
 *,
 *:before,
 *:after {
@@ -24,7 +34,7 @@ html {
 body {
   background-color: #05051f;
   font-family: "League Spartan", sans-serif;
-  font-size: 1.25rem;
+  font-size: var(--body-copy);
 }
 
 .page-wrapper {
@@ -60,7 +70,7 @@ p {
 }
 
 .intro h1 {
-  font-size: 2.25rem;
+  font-size: var(--h1);
   background: -webkit-linear-gradient(#d96a16 5%, #5a868c 85%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -73,7 +83,7 @@ p {
   background-size: 100% 9px;
   background-repeat: repeat-x;
   padding-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: var(--h2);
   color: #5a868c;
   font-weight: 300;
 }
@@ -85,7 +95,7 @@ p {
   background-repeat: no-repeat;
   padding-bottom: 1rem;
   color: #5a868c;
-  font-size: 1.5rem;
+  font-size: var(--h3);
   margin-bottom: 1.5rem;
 }
 
@@ -96,12 +106,12 @@ p {
 .summary p {
   color: #7b9ea3;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  font-size: var(--summary);
   font-weight: 200;
 }
 
 .summary p:nth-child(2) {
-  font-size: 1.25rem;
+  font-size: var(--body-copy);
   font-style: italic;
 }
 
@@ -135,14 +145,16 @@ p {
 
 .preamble p {
   font-weight: 200;
+  font-size: var(--body-copy);
 }
 
 /* Small Version: Main */
 .main {
   margin: 0 auto 4rem auto;
+  font-size: var(--body-copy);
 }
 .main h3 {
-  font-size: 1.5rem;
+  font-size: var(--h3);
   margin-bottom: 1.5rem;
   background: linear-gradient(to left, #05051f 0%, #d96a16 100%);
   background-position: 0 100%;
@@ -215,12 +227,13 @@ footer {
   bottom: 0;
   left: 0;
   padding: 0 0 4rem 0;
+  font-size: var(--footer-text);
 }
 footer a:link, footer a:visited {
   color: #5a868c;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: var(--footer-text);
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
@@ -245,6 +258,7 @@ h2 abbr {
 }
 
 .sidebar {
+  font-size: var(--aside-links);
   padding: 12px;
   background: linear-gradient(to left, #5a868c 5%, #7b9ea3, #5a868c 95%);
   border-radius: 10px;
@@ -258,7 +272,7 @@ h2 abbr {
   margin-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--h3);
   background: linear-gradient(to left, rgb(5, 5, 31) 0%, rgb(217, 106, 22) 100%);
   background-position: 0 100%;
   background-size: 100% 6px;
@@ -345,7 +359,7 @@ h2 abbr {
 @media only screen and (min-width: 900px) {
   .page-wrapper {
     max-width: 80%;
-    margin: 6rem auto 18rem auto;
+    margin: 6rem 10% 18rem 10%;
   }
   .zen-validate-html::before,
   .zen-validate-css::before,
@@ -354,26 +368,8 @@ h2 abbr {
   .zen-github::before {
     width: 100px;
   }
-  footer a:link {
-    font-size: 1.25rem;
-  }
-  .intro h1 {
-    font-size: 3.5rem;
-  }
   .intro h2 {
-    font-size: 2rem;
-  }
-  .preamble p,
-  .summary p:nth-child(2),
-  .main {
-    font-size: 1.5rem;
-  }
-  .summary p {
-    font-size: 2rem;
-  }
-  .main h3,
-  .intro h3 {
-    font-size: 1.75rem;
+    width: 15rem;
   }
   /* Medium view header / moon */
   .intro {
@@ -392,8 +388,8 @@ h2 abbr {
   }
   .summary::before {
     content: url(moon-med.png);
-    width: 360px;
-    height: 360px;
+    width: 380px;
+    height: 380px;
     position: absolute;
     transform: translate(110%, -90%);
     animation-duration: 3s;
@@ -410,9 +406,6 @@ h2 abbr {
     width: 85%;
     margin: 0 auto;
   }
-  body {
-    font-size: 1.34rem;
-  }
   .zen-validate-html::before,
   .zen-validate-css::before,
   .zen-license::before,
@@ -426,7 +419,7 @@ h2 abbr {
     margin: 6rem auto 14rem auto;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-row: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
   }
   footer {
     grid-template-columns: repeat(5, 20%);
@@ -435,12 +428,11 @@ h2 abbr {
     grid-column: 1/-1;
   }
   .main {
-    font-size: 1.5rem;
     grid-column: 2/-1;
     grid-row: 2/4;
   }
   .sidebar {
-    transform: translateX(-4rem);
+    transform: translateX(-5rem);
     min-width: max-content;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -455,17 +447,18 @@ h2 abbr {
   /* Large view header / moon ******* */
   @keyframes moon-large {
     0% {
-      transform: translate(60%, -150%);
+      transform: translate(65%, -150%);
     }
     100% {
-      transform: translate(60%, -70%);
+      transform: translate(65%, -70%);
     }
   }
   .summary::before {
     content: url(moon-lg.png);
     width: 580px;
     height: 580px;
-    transform: translate(60%, -70%);
+    box-shadow: 0 0 150px rgba(245, 241, 226, 0.9);
+    transform: translate(65%, -70%);
     animation-duration: 3s;
     animation-name: moon-large;
   }
