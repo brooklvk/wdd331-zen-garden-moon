@@ -262,7 +262,10 @@ h2 abbr {
   padding-bottom: 10px;
   text-align: center;
   font-size: var(--h3);
-  background: linear-gradient(to left, rgb(5, 5, 31) 0%, rgb(217, 106, 22) 100%);
+  background: linear-gradient(to left, #05051f 0%, #d96a16 100%);
+  background-position: 0 100%;
+  background-size: 100% 6px;
+  background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -390,7 +393,7 @@ h2 abbr {
   }
 }
 /* LARGE VIEW ************************************/
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1150px) {
   html {
     width: 85%;
     margin: 0 auto;
@@ -421,7 +424,7 @@ h2 abbr {
     grid-row: 2/4;
   }
   .sidebar {
-    transform: translateX(-5rem);
+    transform: translateX(-4rem);
     min-width: max-content;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -436,10 +439,10 @@ h2 abbr {
   /* Large view header / moon ******* */
   @keyframes moon-large {
     0% {
-      transform: translate(65%, -150%);
+      transform: translate(79%, -150%);
     }
     100% {
-      transform: translate(65%, -70%);
+      transform: translate(79%, -70%);
     }
   }
   .summary::before {
@@ -447,13 +450,13 @@ h2 abbr {
     width: 580px;
     height: 580px;
     box-shadow: 0 0 150px rgba(245, 241, 226, 0.9);
-    transform: translate(65%, -70%);
+    transform: translate(79%, -70%);
     animation-duration: 3s;
     animation-name: moon-large;
   }
   header,
   .summary p:first-of-type {
-    width: 350px;
+    width: 400px;
   }
 }
 
