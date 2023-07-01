@@ -442,7 +442,7 @@ h2 abbr {
       transform: translate(79%, -150%);
     }
     100% {
-      transform: translate(79%, -70%);
+      transform: translate(79%, -63%);
     }
   }
   .summary::before {
@@ -450,7 +450,7 @@ h2 abbr {
     width: 580px;
     height: 580px;
     box-shadow: 0 0 150px rgba(245, 241, 226, 0.9);
-    transform: translate(79%, -70%);
+    transform: translate(79%, -63%);
     animation-duration: 3s;
     animation-name: moon-large;
   }
