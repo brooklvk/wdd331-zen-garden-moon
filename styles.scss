@@ -44,7 +44,6 @@ $h3-sm-v: 1.5rem;
 $moon-icons-sm: 74px;
 
 // SCSS Medium View Varibles
-
 $moon-icons-md: 100px;
 
 // SCSS Large View Variables
@@ -112,7 +111,7 @@ body {
 }
 
 .page-wrapper {
-  margin: $space-xxlg 10% $space-xxxlg 10%;
+  margin: $space-xxlg 10% $space-xxxlg;
 }
 
 h1,
@@ -195,7 +194,7 @@ p {
   }
 
   &::before {
-    content: url(moon-sm.png);
+    content: url("moon-sm.png");
     width: 161px;
     height: 161px;
     border-radius: 50%;
@@ -256,7 +255,7 @@ p {
     }
 
     & a:active {
-      color: #5a868c;
+      color: $accent-color-medium;
     }
   }
 }
@@ -266,37 +265,37 @@ p {
 .participation,
 .benefits,
 .requirements {
-  margin: 0 0 $space-xlg 0;
+  margin: 0 0 $space-xlg;
 }
 
 /*Small Version: Footer Layout- Move Footer to the Bottom*/
 
 .zen-validate-html::before {
-  content: url(phases-of-the-moon-1.svg);
+  content: url("phases-of-the-moon-1.svg");
   display: block;
   width: $moon-icons-sm;
 }
 
 .zen-validate-css::before {
-  content: url(phases-of-the-moon-2.svg);
+  content: url("phases-of-the-moon-2.svg");
   display: block;
   width: $moon-icons-sm;
 }
 
 .zen-license::before {
-  content: url(phases-of-the-moon-3.svg);
+  content: url("phases-of-the-moon-3.svg");
   display: block;
   width: $moon-icons-sm;
 }
 
 .zen-accessibility::before {
-  content: url(phases-of-the-moon-4.svg);
+  content: url("phases-of-the-moon-4.svg");
   display: block;
   width: $moon-icons-sm;
 }
 
 .zen-github::before {
-  content: url(phases-of-the-moon-5.svg);
+  content: url("phases-of-the-moon-5.svg");
   display: block;
   width: $moon-icons-sm;
 }
@@ -383,7 +382,7 @@ h2 abbr {
 .design-name:link,
 .design-name:visited {
   color: $main-light-color;
-  margin: 12px 0 -2px 0;
+  margin: 12px 0 -2px;
   padding: 0;
   display: list-item;
   list-style-type: " ★ ";
@@ -447,10 +446,10 @@ h2 abbr {
 
 /* MEDIUM VIEW ***************************************/
 
-@media only screen and (min-width: 900px) {
+@media only screen and (width >= 900px) {
   .page-wrapper {
     max-width: 80%;
-    margin: $space-xxlg 10% $space-4xlg 10%;
+    margin: $space-xxlg 10% $space-4xlg;
   }
 
   .zen-validate-html::before,
@@ -479,13 +478,14 @@ h2 abbr {
     0% {
       transform: translate(110%, -150%);
     }
+
     100% {
       transform: translate(110%, -90%);
     }
   }
 
   .summary::before {
-    content: url(moon-med.png);
+    content: url("moon-med.png");
     width: 380px;
     height: 380px;
     position: absolute;
@@ -502,7 +502,7 @@ h2 abbr {
 
 /* LARGE VIEW ************************************/
 
-@media only screen and (min-width: 1150px) {
+@media only screen and (width >= 1150px) {
   html {
     width: 85%;
     margin: 0 auto;
@@ -524,7 +524,7 @@ h2 abbr {
 
   .page-wrapper {
     max-width: 70ch;
-    margin: $space-xxlg auto $space-xxxlg auto;
+    margin: $space-xxlg auto $space-xxxlg;
     @include grid(auto 1fr);
     grid-template-rows: auto auto auto auto;
   }
@@ -562,13 +562,14 @@ h2 abbr {
     0% {
       transform: translate(79%, -150%);
     }
+
     100% {
       transform: translate(79%, -63%);
     }
   }
 
   .summary::before {
-    content: url(moon-lg.png);
+    content: url("moon-lg.png");
     width: 580px;
     height: 580px;
     box-shadow: 0 0 150px rgba(245, 241, 226, 0.9);
