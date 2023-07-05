@@ -1,18 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200;300;400;600&display=swap");
 
-/*RGB Code for Colors In case we need it
-  Cream: rgb(245, 241,226)
-  Deep Blue: rgb(5, 5, 31)
-  Orange: rgb(217,106,22)
-  Light Teal: rgb(123, 158, 163)
-  Dark Teal: rgb(90, 134, 140)
-*/
+// RGB Code for Colors
+// Cream: rgb(245, 241,226)
+// Deep Blue: rgb(5, 5, 31)
+// Orange: rgb(217,106,22)
+// Light Teal: rgb(123, 158, 163)
+// Dark Teal: rgb(90, 134, 140)
 
 //SCSS Variables
-
 $heading-font: "Comfortaa", cursive;
 $body-font: "League Spartan", sans-serif;
-//margin settings between elements
+
+// margin settings between elements
 $space-sm: 0.5rem;
 $space-md: 1rem;
 $space-mdlg: 1.5rem;
@@ -21,18 +20,21 @@ $space-xlg: 4rem;
 $space-xxlg: 6rem;
 $space-xxxlg: 14rem;
 $space-4xlg: 18rem;
-// Font Weight
+
+// Font Weights
 $weight-xlight: 200;
 $weight-light: 300;
 $weight-regular: 400;
 $weight-hover: 600;
 $weight-bold: 700;
+
 // Colors
 $main-dark-color: #05051f;
 $main-light-color: #f5f1e2;
 $accent-color-bright: #d96a16;
 $accent-color-light: #7b9ea3;
 $accent-color-medium: #5a868c;
+
 // Font-size
 $intro-text-sm-v: 1.5rem;
 $body-copy-sm-v: 1.25rem;
@@ -40,7 +42,8 @@ $footer-text: 1rem;
 $h1-sm-v: 2.25rem;
 $h2-sm-v: 1.5rem;
 $h3-sm-v: 1.5rem;
-// icon size
+
+// Small View Icon Size
 $moon-icons-sm: 74px;
 
 // SCSS Medium View Varibles
@@ -56,7 +59,7 @@ $h2-lg-v: 2rem;
 $h3-lg-v: 1.75rem;
 $moon-icons-lg: 125px;
 
-// mixins
+// SCSS Mixins
 @mixin grid($col...) {
   display: grid;
   grid-template-columns: $col;
@@ -79,8 +82,7 @@ $moon-icons-lg: 125px;
   background-repeat: no-repeat;
 }
 
-/* General Styles*/
-/* Reset margin, padding, and box model. */
+/* CSS Variables **************/
 
 :root {
   --h1: clamp(2.25rem, calc(1.82rem + 2.44vw), 3.5rem);
@@ -92,6 +94,9 @@ $moon-icons-lg: 125px;
   --aside-links: clamp(1.13rem, calc(1rem + 0.73vw), 1.5rem);
 }
 
+/* General Styles ***********************/
+
+/* Reset margin, padding, and box model. */
 *,
 *:before,
 *:after {
@@ -136,7 +141,7 @@ p {
   letter-spacing: 0.03rem;
 }
 
-/* Small Version: Header Area Layout ************ */
+/* SMALL VIEW: Header Area and Layout **************** */
 
 .intro {
   display: flex;
@@ -193,6 +198,7 @@ p {
     font-style: italic;
   }
 
+  /* Include Moon Image *************/
   &::before {
     content: url("moon-sm.png");
     width: 161px;
@@ -206,6 +212,8 @@ p {
     align-items: center;
     margin: $space-xlg auto;
   }
+
+  /*  Link States for Summary Text  ************/
 
   & p a:link,
   & p a:visited {
@@ -227,7 +235,7 @@ p {
   font-size: var(--body-copy);
 }
 
-/* Small Version: Main */
+/* SMALL VIEW: Main Styles and Layout *************/
 
 .main {
   margin: 0 auto $space-xlg auto;
@@ -240,6 +248,8 @@ p {
     padding-bottom: $space-md;
     color: $accent-color-medium;
   }
+
+  /* Main: Paragraph Link States *************/
 
   & p {
     font-weight: $weight-xlight;
@@ -260,6 +270,8 @@ p {
   }
 }
 
+/* All Paragraph Margins: Except Summary ********/
+
 .preamble,
 .explanation,
 .participation,
@@ -268,7 +280,7 @@ p {
   margin: 0 0 $space-xlg;
 }
 
-/*Small Version: Footer Layout- Move Footer to the Bottom*/
+/* Footer-  SVG Icons ******************/
 
 .zen-validate-html::before {
   content: url("phases-of-the-moon-1.svg");
@@ -300,6 +312,8 @@ p {
   width: $moon-icons-sm;
 }
 
+/* Footer Layout ********************/
+
 footer {
   @include grid(19% 19% 19% 19% 19%);
   justify-items: center;
@@ -311,6 +325,8 @@ footer {
   left: 0;
   padding: 0 0 4rem 0;
   font-size: var(--footer-text);
+
+  /* Footer Link States ******************/
 
   & a:link,
   & a:visited {
@@ -334,7 +350,7 @@ footer {
   }
 }
 
-/* Small Version: Aside */
+/* SMALL VIEW: Aside Area and Layout *********/
 
 ul {
   list-style: none;
@@ -444,13 +460,15 @@ h2 abbr {
   padding-bottom: 20px;
 }
 
-/* MEDIUM VIEW ***************************************/
+/* MEDIUM VIEW ***********************************/
 
 @media only screen and (width >= 900px) {
   .page-wrapper {
     max-width: 80%;
     margin: $space-xxlg 10% $space-4xlg;
   }
+
+  /* Medium View: Footer Icons Size ********/
 
   .zen-validate-html::before,
   .zen-validate-css::before,
@@ -464,7 +482,7 @@ h2 abbr {
     width: 15rem;
   }
 
-  /* Medium view header / moon */
+  /* Medium View Header / Moon *********************/
 
   .intro {
     position: relative;
@@ -500,7 +518,7 @@ h2 abbr {
   }
 }
 
-/* LARGE VIEW ************************************/
+/* LARGE VIEW *******************/
 
 @media only screen and (width >= 1150px) {
   html {
@@ -508,9 +526,7 @@ h2 abbr {
     margin: 0 auto;
   }
 
-  // body {
-  //   font-size: $body-copy-aside;
-  // }
+  /* Large View: Footer Icons Size ************/
 
   .zen-validate-html::before,
   .zen-validate-css::before,
@@ -520,17 +536,13 @@ h2 abbr {
     width: $moon-icons-lg;
   }
 
-  /* LARGE VIEW: PAGE LAYOUT *************************************/
+  /* LARGE VIEW: Page Layout ************************/
 
   .page-wrapper {
     max-width: 70ch;
     margin: $space-xxlg auto $space-xxxlg;
     @include grid(auto 1fr);
     grid-template-rows: auto auto auto auto;
-  }
-
-  footer {
-    grid-template-columns: repeat(5, 20%);
   }
 
   .intro {
@@ -549,6 +561,12 @@ h2 abbr {
     grid-row: 2/3;
   }
 
+  footer {
+    grid-template-columns: repeat(5, 20%);
+  }
+
+  /* Large View Aside Adjustments ********/
+
   .design-selection,
   .design-archives,
   .zen-resources {
@@ -556,7 +574,7 @@ h2 abbr {
     padding-right: 25px;
     text-align: left;
   }
-  /* Large view header / moon ******* */
+  /* Large view header / moon ************* */
 
   @keyframes moon-large {
     0% {
@@ -577,6 +595,8 @@ h2 abbr {
     animation-duration: 3s;
     animation-name: moon-large;
   }
+
+  /* Large View: Intro Adjustments *********/
 
   header,
   .summary p:first-of-type {
