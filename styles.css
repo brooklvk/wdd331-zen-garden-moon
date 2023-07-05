@@ -1,14 +1,7 @@
 @charset "UTF-8";
+/* FONT FAMILIES IMPORT */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=League+Spartan:wght@200;300;400;600&display=swap");
-/*RGB Code for Colors In case we need it
-  Cream: rgb(245, 241,226)
-  Deep Blue: rgb(5, 5, 31)
-  Orange: rgb(217,106,22)
-  Light Teal: rgb(123, 158, 163)
-  Dark Teal: rgb(90, 134, 140)
-*/
-/* General Styles*/
-/* Reset margin, padding, and box model. */
+/* CSS VARIABLES **************/
 :root {
   --h1: clamp(2.25rem, calc(1.82rem + 2.44vw), 3.5rem);
   --h2: clamp(1.5rem, calc(1.33rem + 0.98vw), 2rem);
@@ -19,6 +12,7 @@
   --aside-links: clamp(1.13rem, calc(1rem + 0.73vw), 1.5rem);
 }
 
+/* PARTIAL RESET **********************/
 *,
 *:before,
 *:after {
@@ -27,6 +21,7 @@
   padding: 0;
 }
 
+/* GENERAL STYLES ***********************/
 html {
   position: relative;
 }
@@ -38,7 +33,7 @@ body {
 }
 
 .page-wrapper {
-  margin: 6rem 10% 14rem 10%;
+  margin: 6rem 10% 14rem;
 }
 
 h1,
@@ -63,7 +58,7 @@ p {
   letter-spacing: 0.03rem;
 }
 
-/* Small Version: Header Area Layout ************ */
+/* SMALL VIEW: HEADER STYLES & LAYOUT **************** */
 .intro {
   display: flex;
   flex-direction: column;
@@ -98,6 +93,8 @@ p {
 
 .summary {
   margin-bottom: 2rem;
+  /* INCLUDE MOON IMAGE *************/
+  /*  LINK STATES: SUMMARY  ************/
 }
 .summary p {
   color: #7b9ea3;
@@ -110,7 +107,7 @@ p {
   font-style: italic;
 }
 .summary::before {
-  content: url(moon-sm.png);
+  content: url("moon-sm.png");
   width: 161px;
   height: 161px;
   border-radius: 50%;
@@ -138,10 +135,11 @@ p {
   font-size: var(--body-copy);
 }
 
-/* Small Version: Main */
+/* SMALL VIEW: MAIN STYLES AND LAYOUT *************/
 .main {
   margin: 0 auto 4rem auto;
   font-size: var(--body-copy);
+  /* MAIN: LINK STATES *************/
 }
 .main h3 {
   font-size: var(--h3);
@@ -167,45 +165,47 @@ p {
   color: #5a868c;
 }
 
+/* ALL PARAGRAPH MARGINS EXCEPT SUMMARY ********/
 .preamble,
 .explanation,
 .participation,
 .benefits,
 .requirements {
-  margin: 0 0 4rem 0;
+  margin: 0 0 4rem;
 }
 
-/*Small Version: Footer Layout- Move Footer to the Bottom*/
+/* FOOTER: SVG ICONS ******************/
 .zen-validate-html::before {
-  content: url(phases-of-the-moon-1.svg);
+  content: url("phases-of-the-moon-1.svg");
   display: block;
   width: 74px;
 }
 
 .zen-validate-css::before {
-  content: url(phases-of-the-moon-2.svg);
+  content: url("phases-of-the-moon-2.svg");
   display: block;
   width: 74px;
 }
 
 .zen-license::before {
-  content: url(phases-of-the-moon-3.svg);
+  content: url("phases-of-the-moon-3.svg");
   display: block;
   width: 74px;
 }
 
 .zen-accessibility::before {
-  content: url(phases-of-the-moon-4.svg);
+  content: url("phases-of-the-moon-4.svg");
   display: block;
   width: 74px;
 }
 
 .zen-github::before {
-  content: url(phases-of-the-moon-5.svg);
+  content: url("phases-of-the-moon-5.svg");
   display: block;
   width: 74px;
 }
 
+/* FOOTER: LAYOUT ********************/
 footer {
   display: grid;
   grid-template-columns: 19% 19% 19% 19% 19%;
@@ -218,6 +218,7 @@ footer {
   left: 0;
   padding: 0 0 4rem 0;
   font-size: var(--footer-text);
+  /* FOOTER: LINK STATES ******************/
 }
 footer a:link, footer a:visited {
   color: #5a868c;
@@ -237,7 +238,7 @@ footer a:active {
   color: #f5f1e2;
 }
 
-/* Small Version: Aside */
+/* SMALL VIEW: ASIDE STYELS AND LAYOUT *********/
 ul {
   list-style: none;
 }
@@ -257,7 +258,7 @@ h2 abbr {
   border: 6px solid #d96a16;
 }
 .sidebar h3 {
-  color: rgb(245, 241, 226);
+  color: #f5f1e2;
   margin-top: 10px;
   padding-bottom: 10px;
   text-align: center;
@@ -271,7 +272,7 @@ h2 abbr {
   background-repeat: repeat-x;
 }
 
-/* Aside: Link & Visited ******************* */
+/* ASIDE: LINK & VISITED ******************* */
 .designer-name:link,
 .designer-name:visited {
   color: #05051f;
@@ -280,7 +281,7 @@ h2 abbr {
 .design-name:link,
 .design-name:visited {
   color: #f5f1e2;
-  margin: 12px 0 -2px 0;
+  margin: 12px 0 -2px;
   padding: 0;
   display: list-item;
   list-style-type: " ★ ";
@@ -296,7 +297,7 @@ h2 abbr {
   list-style-type: " ★ ";
 }
 
-/* Aside: Hover ***********************  */
+/* ASIDE: HOVER ***********************  */
 .designer-name:hover {
   transition: all 0.15s ease-in;
   font-weight: 600;
@@ -316,7 +317,7 @@ h2 abbr {
   transform: scale(1.02);
 }
 
-/* Aside: Active ********************* */
+/* ASIDE: ACTIVE ********************* */
 .designer-name:active {
   color: #f5f1e2;
 }
@@ -347,29 +348,35 @@ h2 abbr {
   padding-bottom: 20px;
 }
 
-/* MEDIUM VIEW ***************************************/
-@media only screen and (min-width: 900px) {
+/* MEDIUM VIEW ***********************************/
+@media only screen and (width >= 900px) {
   .page-wrapper {
     max-width: 80%;
-    margin: 6rem 10% 18rem 10%;
+    margin: 6rem 10% 18rem;
   }
+
+  /* MEDIUM VIEW: FOOTER ICONS SIZE ********/
   .zen-validate-html::before,
-  .zen-validate-css::before,
-  .zen-license::before,
-  .zen-accessibility::before,
-  .zen-github::before {
+.zen-validate-css::before,
+.zen-license::before,
+.zen-accessibility::before,
+.zen-github::before {
     width: 100px;
   }
+
   .intro h2 {
     width: 15rem;
   }
-  /* Medium view header / moon */
+
+  /* MEDIUM VIEW HEADER / MOON *********************/
   .intro {
     position: relative;
   }
+
   .summary {
     margin-top: 4rem;
   }
+
   @keyframes moon-medium {
     0% {
       transform: translate(110%, -150%);
@@ -379,7 +386,7 @@ h2 abbr {
     }
   }
   .summary::before {
-    content: url(moon-med.png);
+    content: url("moon-med.png");
     width: 380px;
     height: 380px;
     position: absolute;
@@ -387,56 +394,67 @@ h2 abbr {
     animation-duration: 3s;
     animation-name: moon-medium;
   }
+
   header,
-  .summary p:first-of-type {
+.summary p:first-of-type {
     width: 400px;
   }
 }
-/* LARGE VIEW ************************************/
-@media only screen and (min-width: 1150px) {
+/* LARGE VIEW *******************/
+@media only screen and (width >= 1150px) {
   html {
     width: 85%;
     margin: 0 auto;
   }
+
+  /* LARGE VIEW: FOOTER ICONS SIZE************/
   .zen-validate-html::before,
-  .zen-validate-css::before,
-  .zen-license::before,
-  .zen-accessibility::before,
-  .zen-github::before {
+.zen-validate-css::before,
+.zen-license::before,
+.zen-accessibility::before,
+.zen-github::before {
     width: 125px;
   }
-  /* LARGE VIEW: PAGE LAYOUT *************************************/
+
+  /* LARGE VIEW: PAGE LAYOUT ************************/
   .page-wrapper {
     max-width: 70ch;
-    margin: 6rem auto 14rem auto;
+    margin: 6rem auto 14rem;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto auto auto;
   }
-  footer {
-    grid-template-columns: repeat(5, 20%);
-  }
+
   .intro {
     grid-column: 1/-1;
   }
+
   .main {
     grid-column: 2/-1;
     grid-row: 2/4;
   }
+
   .sidebar {
     transform: translateX(-4rem);
     min-width: max-content;
     grid-column: 1/2;
     grid-row: 2/3;
   }
+
+  footer {
+    grid-template-columns: repeat(5, 20%);
+  }
+
+  /* LARGE VIEW ASIDE ADJUSTMENTS ********/
   .design-selection,
-  .design-archives,
-  .zen-resources {
+.design-archives,
+.zen-resources {
     padding-left: 25px;
     padding-right: 25px;
     text-align: left;
   }
-  /* Large view header / moon ******* */
+
+  /* LARGE VIEW HEADER / MOON ************* */
   @keyframes moon-large {
     0% {
       transform: translate(79%, -150%);
@@ -446,7 +464,7 @@ h2 abbr {
     }
   }
   .summary::before {
-    content: url(moon-lg.png);
+    content: url("moon-lg.png");
     width: 580px;
     height: 580px;
     box-shadow: 0 0 150px rgba(245, 241, 226, 0.9);
@@ -454,8 +472,10 @@ h2 abbr {
     animation-duration: 3s;
     animation-name: moon-large;
   }
+
+  /* LARGE VIEW: INTRO ADJUSTMENT *********/
   header,
-  .summary p:first-of-type {
+.summary p:first-of-type {
     width: 400px;
   }
 }
